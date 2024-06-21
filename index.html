@@ -10,22 +10,34 @@
 <body>
     <div class="advice flex">
         <img src="./media/Domi_unaviliable.svg" alt="">
-        <p>
+        <p class="max-screen">
             <strong>Domi</strong> estara disponible proximamente para dispositivos de escritorio ;)
         </p>
+        <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
     </div>
     <header>
         <div class="top_header flex flex-j_sa-a_c">
             <img src="./media/Domi.svg" alt="logo" class="logo">
             <input type="text" name="" id="search" placeholder="Busca comida en tu zona">
             <input type="checkbox" id="toggle_cart">
-            <label for="toggle_cart">
+            <label for="toggle_cart" class="flex flex-j_sa-a_c">
                 <img src="./media/cart.svg" alt="" class="cart">
             </label>
+            <aside class="cart_container">
+                <div class="header_aside">
+                    <h3>Carrito de compras</h3>
+                    <div class="exit_aside">
+                        <span>x</span>
+                    </div>
+                </div>
+            </aside>
             <input type="checkbox" id="toggle_menu">
-            <label for="toggle_menu">
+            <label for="toggle_menu" class="flex flex-j_sa-a_c">
                 <img src="./media/hamburguer.svg" alt="" class="hamburger_menu">
             </label>
+            <aside class="menu_container">
+                menu
+            </aside>
         </div>
         <div class="bottom_header flex flex-j_c-a_c">
             <img src="./media/localitation.svg" alt="">
