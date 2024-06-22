@@ -6,6 +6,15 @@
     <title>Domi: Pide Domis de comida</title>
     <link rel="icon" type="image" href="./media/Domi.svg">
     <link rel="stylesheet" href="style.css">
+    <script defer>
+        function close_menu(){
+            const checkboxes = document.querySelectorAll("input[type='checkbox']")
+            checkboxes.forEach(function(checkbox){
+                checkbox.checked = false
+            })
+            
+        }
+    </script>
 </head>
 <body>
     <div class="advice flex">
@@ -26,7 +35,7 @@
             <aside class="cart_container flex_col j_sb_not-a">
                 <div class="flex j_sb">
                     <h3>Carrito de compras</h3>
-                    <div class="exit_aside">
+                    <div onclick="close_menu()" class="exit_aside">
                         <span>x</span>
                     </div>
                 </div>
@@ -83,7 +92,7 @@
             </label>
             <aside class="menu_container flex_col j_sb_not-a">
                 <div class="flex j_flex-end">
-                    <div class="exit_aside">
+                    <div onclick="close_menu()" class="exit_aside">
                         <span>x</span>
                     </div>
                 </div>
