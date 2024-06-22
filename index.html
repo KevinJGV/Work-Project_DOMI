@@ -6,24 +6,6 @@
     <title>Domi: Pide Domis de comida</title>
     <link rel="icon" type="image" href="./media/Domi.svg">
     <link rel="stylesheet" href="style.css">
-    <script defer>
-        function close_menu(){
-            const checkboxes = document.querySelectorAll("input[type='checkbox']")
-            checkboxes.forEach(function(checkbox){
-                checkbox.checked = false
-            })
-        };
-        function adjustPadding() {
-        const navbarHeight = window.innerHeight - document.documentElement.clientHeight;
-        document.body.style.paddingBottom = navbarHeight + "px";
-        const asideElements = document.querySelectorAll("aside");
-        asideElements.forEach(function(aside) {
-            aside.style.paddingBottom = navbarHeight + "px";
-        });
-        }
-        adjustPadding();
-        window.addEventListener("resize", adjustPadding);
-    </script>
 </head>
 <body>
     <div class="advice flex">
@@ -123,5 +105,23 @@
             <span>Tangamandapio 🞃</span>
         </div>
     </header>
+    <script defer>
+    function close_menu(){
+        const checkboxes = document.querySelectorAll("input[type='checkbox']")
+        checkboxes.forEach(function(checkbox){
+            checkbox.checked = false
+        })
+    };
+    function adjustPadding() {
+    const navbarHeight = window.innerHeight - document.documentElement.clientHeight;
+    document.body.style.paddingBottom = navbarHeight + "px";
+    const asideElements = document.querySelectorAll("aside");
+    asideElements.forEach(function(aside) {
+        aside.style.paddingBottom = navbarHeight + "px";
+    });
+    }
+    adjustPadding();
+    window.addEventListener("resize", adjustPadding);
+    </script>
 </body>
 </html>
