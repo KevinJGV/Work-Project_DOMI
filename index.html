@@ -105,6 +105,11 @@
             <span>Tangamandapio 🞃</span>
         </div>
     </header>
+    <main>
+        
+    </main>
+    <footer>
+    </footer>
     <script defer>
     function close_menu(){
         const checkboxes = document.querySelectorAll("input[type='checkbox']")
@@ -114,14 +119,22 @@
     };
     function adjustPadding() {
     const navbarHeight = window.innerHeight - document.documentElement.clientHeight;
-    document.body.style.paddingBottom = navbarHeight + "px";
+    const footer = document.querySelector("footer");
+    if (navbarHeight === 0) {
+        footer.style.paddingBottom = "95px"
+    } else {
+        footer.style.paddingBottom = navbarHeight + "px";
+    };
     const asideElements = document.querySelectorAll("aside");
     asideElements.forEach(function(aside) {
+        if (navbarHeight === 0) {
+        aside.style.paddingBottom = "95px";
+        } else {
         aside.style.paddingBottom = navbarHeight + "px";
-    });
-    }
+        }
+    })};
     adjustPadding();
-    window.addEventListener("resize", adjustPadding);
+    document.addEventListener("resize", adjustPadding);
     </script>
 </body>
 </html>
