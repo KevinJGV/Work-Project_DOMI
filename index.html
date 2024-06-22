@@ -16,30 +16,76 @@
         <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
     </div>
     <header>
-        <div class="top_header flex flex-j_sa-a_c">
+        <nav class="top_header flex j_sa">
             <img src="./media/Domi.svg" alt="logo" class="logo">
             <input type="text" name="" id="search" placeholder="Busca comida en tu zona">
             <input type="checkbox" id="toggle_cart">
-            <label for="toggle_cart" class="flex flex-j_sa-a_c">
+            <label for="toggle_cart" class="flex j_sa">
                 <img src="./media/cart.svg" alt="" class="cart">
             </label>
-            <aside class="cart_container">
+            <aside class="cart_container flex_col j_sb_not-a">
                 <div class="header_aside">
                     <h3>Carrito de compras</h3>
                     <div class="exit_aside">
                         <span>x</span>
                     </div>
                 </div>
+                <div class="body_aside">
+                    <div class="cart_item">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Mccombo Grande Mcpollo</h4>
+                                <p>Elige tú mccombo de hamburguesa con pattie de pollo, mayonesa y lechuga con papas grandes y gaseosa grande a elegir</p>
+                            </div>
+                            <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="">
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$40.000 c/u</span>
+                            <span class="item_quantity flex j_sa">
+                                <p>Cantidad:</p>
+                                <div class="value">3</div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cart_item">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Mcflurry Oreo</h4>
+                                <p>Helado de vainilla con galleta oreo triturada y topping de chocolate.</p>
+                            </div>
+                            <img src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10" alt="">
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$10.900 c/u</span>
+                            <span class="item_quantity flex j_sa">
+                                <p>Cantidad:</p>
+                                <div class="value">1</div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_aside flex_col j_C">
+                    <div class="grid_paycheck grid">
+                        <span>Subtotal:</span>
+                        <span class="j_flex-end">$ 50.900</span>
+                        <span>Costos de envío:</span>
+                        <span class="j_flex-end">$ 4.800</span>
+                        <hr>
+                        <h3>Total:</h3>
+                        <h3 class="j_flex-end">$ 55.700</h3>
+                    </div>
+                    <button>Procesar pedido</button>
+                </div>
             </aside>
             <input type="checkbox" id="toggle_menu">
-            <label for="toggle_menu" class="flex flex-j_sa-a_c">
+            <label for="toggle_menu" class="flex j_sa">
                 <img src="./media/hamburguer.svg" alt="" class="hamburger_menu">
             </label>
             <aside class="menu_container">
                 menu
             </aside>
-        </div>
-        <div class="bottom_header flex flex-j_c-a_c">
+        </nav>
+        <div class="bottom_header flex j_c">
             <img src="./media/localitation.svg" alt="">
             <span>Tangamandapio 🞃</span>
         </div>
