@@ -49,10 +49,12 @@ body {
 .j_c {
     justify-content: center;
     align-items: center;
+    justify-items: center;
 }
 
 .j_flex-end {
     justify-self: self-end;
+    justify-content: end;
 }
 :root {
     --background_color-gradient-a : black;
@@ -142,6 +144,10 @@ body {
     #toggle_cart:checked + label + .cart_container {
         left: 0;           
     }
+
+    #toggle_menu:checked + label + .menu_container {
+        left: 0;           
+    }
 }
 
 @media (min-width:600px) and (max-width:991px) {
@@ -150,6 +156,10 @@ body {
     }
 
     #toggle_cart:checked + label + .cart_container {
+        left: 50vw;           
+    }
+
+    #toggle_menu:checked + label + .menu_container {
         left: 50vw;           
     }
 }
@@ -199,24 +209,8 @@ body {
         padding: 20px;
     }
 
-    /* .cart_container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100cqw;
-        background-color: #d8d8d8;
-        padding: 20px;
-    } */
-
     .cart_container h3 {
         margin: 0;
-    }
-
-    .header_aside {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .exit_aside {
@@ -317,8 +311,20 @@ body {
         font-weight: 600;
         padding: 10px;
     }
-    .menu_container {
-        display: none;
+
+    .buttons_aside {
+        gap: 20px
+    }
+
+    .buttons_aside * {
+        width: 120px;
+    }
+
+    .options_aside {
+        padding-left: 40px;
+    }
+    .menu_logo {
+        width: 125px;
     }
 
     .bottom_header {
