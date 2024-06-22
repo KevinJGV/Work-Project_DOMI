@@ -12,8 +12,17 @@
             checkboxes.forEach(function(checkbox){
                 checkbox.checked = false
             })
-            
+        };
+        function adjustPadding() {
+        const navbarHeight = window.innerHeight - document.documentElement.clientHeight;
+        document.body.style.paddingBottom = navbarHeight + "px";
+        const asideElements = document.querySelectorAll("aside");
+        asideElements.forEach(function(aside) {
+            aside.style.paddingBottom = navbarHeight + "px";
+        });
         }
+        adjustPadding();
+        window.addEventListener("resize", adjustPadding);
     </script>
 </head>
 <body>
