@@ -257,10 +257,11 @@ a {
 
     .cart_item_data_text p {
         font-weight: 300;
+        font-size: 0.89rem;
     }
     .cart_item_data img {
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
         background-color: white;
         border-radius: 30px;
         box-shadow: rgba(182, 181, 181, 0.575) 0px 10px 10px;
@@ -268,6 +269,11 @@ a {
 
     .cart_item_order {
         margin-block: 10px;
+    }
+
+    .cart_item_order * {
+        margin-block: 10px;
+        font-size: 0.9rem;
     }
 
     .cart_item_order .value{
@@ -350,11 +356,12 @@ a {
         position: relative;
         margin-block: 40px;
     }
-    
+    section *:not(.trail) {
+        z-index: 5;
+    }
     section h2{
         text-align: center;
         position: relative;
-        z-index: 5;
     }
     .trail {
         position: absolute;
@@ -453,6 +460,36 @@ a {
         color: var(--orange_alternative);
     }
 
+    .signup_message {
+        gap: 5px;
+        text-wrap: nowrap;
+        flex-wrap: wrap;
+    }
+    
+    .signup_message * {
+        margin: 0;
+    }
+    
+    .signup_message h2:not(.highlight) {
+        margin-bottom: 10px
+    }
+
+    .grid_shop {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .shop h2 {
+       text-align: unset;
+    }
+    
+    .grid_shop {
+       gap: 10px;
+    }
+    
+    .grid_shop .cart_item{
+       margin: 0;
+    }
+
     footer {
         text-align: center;
         color: var(--gray_border);
@@ -496,6 +533,10 @@ a {
 
     .img_box {
         height: 150px;
+    }
+
+    .grid_shop {
+        grid-template-columns: 1fr;
     }
 
 }
