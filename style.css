@@ -12,6 +12,15 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
 }
 
 .flex {
@@ -50,18 +59,27 @@ body {
     justify-content: center;
     align-items: center;
     justify-items: center;
+    align-content: center;
 }
 
 .j_flex-end {
     justify-self: self-end;
     justify-content: end;
 }
+
+.card {
+    background-color: var(--lightgray_main);
+	border-radius: 15px;
+	padding: 10px;
+}
 :root {
     --background_color-gradient-a : black;
     --background_color-gradient-b : rgb(0, 36, 56);
     --blue_main: #092334;
     --yellow_main: #F3B310;
+    --lightgray_main: #ebebeb;
     --gray_border: #989898;
+    --orange_alternative: #FF441F;
 }
 
 @media (max-width:300px) {
@@ -136,37 +154,20 @@ body {
 
 }
 
-@media (min-width:301px) and (max-width:599px) {
-    aside {
-        width: 100cqw;
-    }
-    
-    #toggle_cart:checked + label + .cart_container {
-        left: 0;           
-    }
-
-    #toggle_menu:checked + label + .menu_container {
-        left: 0;           
-    }
-}
-
-@media (min-width:600px) and (max-width:991px) {
-    aside {
-        width: 50cqw;
-    }
-
-    #toggle_cart:checked + label + .cart_container {
-        left: 50vw;           
-    }
-
-    #toggle_menu:checked + label + .menu_container {
-        left: 50vw;           
-    }
-}
-
 @media (min-width:301px) and (max-width:991px) {
     .advice {
         display: none;
+    }
+
+    header {
+        position: fixed;
+        width: 100vw;
+        background-color: white;
+        z-index: 10;
+    }
+
+    nav > a {
+        text-align: center;
     }
 
     .top_header {
@@ -205,7 +206,7 @@ body {
         top: 0;
         left: 100%;
         height: 100vh;
-        background-color: #d8d8d8;
+        background-color: var(--lightgray_main);
         padding: 20px;
     }
 
@@ -304,7 +305,7 @@ body {
 
     button {
         border: 0;
-        border-radius: 20px;
+        border-radius: 15px;
         background-color: var(--blue_main);
         color: var(--yellow_main);
         font-size: 1.5rem;
@@ -329,10 +330,202 @@ body {
 
     .bottom_header {
         height: 30px;
+        align-items: flex-start;
         gap: 5px;
         border-bottom: 0.5px solid transparent;
         border-image: linear-gradient(to right, var(--yellow_main), white, white);
         border-image-slice: 1;
         box-shadow: rgba(219, 219, 219, 0.548) 0px 10px 10px;
+        user-select: none;
+    }
+    
+    main {
+        background-image: url(./media/bg_a.svg);
+        background-repeat: repeat;
+        margin-top: 90px;
+        padding: 20px;
+    }
+
+    section{
+        position: relative;
+        margin-block: 40px;
+    }
+    
+    section h2{
+        text-align: center;
+        position: relative;
+        z-index: 5;
+    }
+    .trail {
+        position: absolute;
+        top: -10px;
+        left: 50cqw;
+        transform: translate(-60%);
+    }
+
+    .grid_restaurants, .trending {
+        z-index: 5;
+        position: relative;
+        gap: 5px;
+    }
+
+    .restaurant_logo {
+        height: 100px;
+        border-radius: 200px;
+    }
+
+    .trending {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .trending_item{
+        height: fit-content;
+        align-self: center;
+        text-wrap: nowrap;
+    }
+
+    .info h1 {
+        text-align: center;
+     }
+     
+    .highlight {
+         border: 0;
+         border-radius: 15px;
+         background-color: var(--blue_main);
+         color: var(--yellow_main);
+         padding: 10px;
+    }
+
+    .download_box .card {
+        flex-grow: 1.5;
+        text-align: center;
+        border-radius: 15px 0 0 15px;
+    }
+    .download_box a {
+        flex-grow: 1;
+    }
+    
+    .download_box button {
+        border-radius: 0 15px 15px 0;
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .alternative_button {
+        border: 0;
+        border-radius: 15px;
+        background-color: var(--orange_alternative);
+        color: white;
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    .img_box {
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .info, .info_card_box {
+        gap: 8px;
+    }
+    
+    .img_box * {
+        width: 100%;
+    }
+
+    .info_card {
+        padding: 0;
+    }
+
+    .info_card_text {
+        padding: 20px;
+    }
+    
+    .info_card p {
+        font-size: 0.9rem;
+        padding-inline: 15px;
+    }
+    
+    .info_card strong {
+        color: var(--orange_alternative);
+    }
+
+    footer {
+        text-align: center;
+        color: var(--gray_border);
+        padding: 20px;
+    }
+}
+
+@media (min-width:301px) and (max-width:599px) {
+    aside {
+        width: 100cqw;
+    }
+    
+    #toggle_cart:checked + label + .cart_container {
+        left: 0;           
+    }
+
+    #toggle_menu:checked + label + .menu_container {
+        left: 0;           
+    }
+
+    .grid_restaurants {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid_item div {
+        flex-flow: row;
+    }
+
+    .grid_item_1 {
+        grid-column: 1 / 3;
+    }
+
+    .restaurant_logo {
+        height: 55px;
+        border-radius: 200px;
+    }
+
+    .download_box .card {
+        font-size: 0.8rem;
+    }
+
+    .img_box {
+        height: 150px;
+    }
+
+}
+
+@media (min-width:600px) and (max-width:991px) {
+    aside {
+        width: 50cqw;
+    }
+
+    #toggle_cart:checked + label + .cart_container {
+        left: 50vw;           
+    }
+
+    #toggle_menu:checked + label + .menu_container {
+        left: 50vw;           
+    }
+
+    .grid_restaurants {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .download_box {
+        margin-inline: 10%;
+    }
+
+    .info_card_box {
+        flex-flow: row;
+    }
+
+    footer {
+        flex-direction: row;
     }
 }
