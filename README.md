@@ -42,4 +42,4 @@ Para visualizar el proyecto, puedes descargar el repositorio e iniciarlo mediant
 
 * [Kevin González - KevinJGV](https://github.com/KevinJGV)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto.
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/KevinJGV/Work-Project_DOMI/graphs/contributors) quíenes han participado en este proyecto.
