@@ -117,7 +117,7 @@ a {
         text-align: center;
     }
 }
-@media (min-width:992px) {
+/* @media (min-width:992px) {
     body *:not(.advice, .advice img, .max-screen, .max-screen *) {
         display: none;
     }
@@ -152,9 +152,9 @@ a {
         text-align: center;
     }
 
-}
+} */
 
-@media (min-width:301px) and (max-width:991px) {
+@media (min-width:301px) {
     .advice {
         display: none;
     }
@@ -541,7 +541,7 @@ a {
 
 }
 
-@media (min-width:600px) and (max-width:991px) {
+@media (min-width:600px) {
     aside {
         width: 50cqw;
     }
