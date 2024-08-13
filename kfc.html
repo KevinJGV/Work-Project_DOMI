@@ -6,9 +6,10 @@
     <title>KFC Tangamandapio</title>
     <link rel="icon" type="image" href="./media/Domi.svg">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="advice flex">
+    <div class="advice flex unselected">
         <img src="./media/Domi_unaviliable.svg" alt="">
         <p class="max-screen">
             <strong>Domi</strong> estara disponible proximamente para dispositivos de escritorio ;)
@@ -17,12 +18,12 @@
     </div>
     <header>
         <nav class="top_header flex j_sa">
-            <a href="./index.html" class="j_c">
+            <a href="./index.html" class="j_c unselected flex">
                 <img src="./media/Domi.svg" alt="logo" class="logo">
             </a>
             <input type="text" name="" id="search" placeholder="Busca comida en tu zona">
             <input type="checkbox" id="toggle_cart">
-            <label for="toggle_cart" class="flex j_sa">
+            <label for="toggle_cart" class="flex j_sa unselected">
                 <img src="./media/cart.svg" alt="" class="cart">
             </label>
             <aside class="cart_container flex_col j_sb_not-a">
@@ -39,13 +40,13 @@
                                 <h4>Mccombo Grande Mcpollo</h4>
                                 <p>Elige tú mccombo de hamburguesa con pattie de pollo, mayonesa y lechuga con papas grandes y gaseosa grande a elegir</p>
                             </div>
-                            <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="">
+                            <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="" class="unselected">
                         </div>
                         <div class="cart_item_order flex j_sb">
                             <span class="item_price">$40.000 c/u</span>
                             <span class="item_quantity flex j_sa">
                                 <p>Cantidad:</p>
-                                <div class="value">3</div>
+                                <input type="text" class="value" value="3">
                             </span>
                         </div>
                     </div>
@@ -55,13 +56,13 @@
                                 <h4>Mcflurry Oreo</h4>
                                 <p>Helado de vainilla con galleta oreo triturada y topping de chocolate.</p>
                             </div>
-                            <img src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10" alt="">
+                            <img src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10" alt="" class="unselected">
                         </div>
                         <div class="cart_item_order flex j_sb">
                             <span class="item_price">$10.900 c/u</span>
                             <span class="item_quantity flex j_sa">
                                 <p>Cantidad:</p>
-                                <div class="value">1</div>
+                                <input type="text" class="value" value="1">
                             </span>
                         </div>
                     </div>
@@ -81,7 +82,7 @@
             </aside>
             <input type="checkbox" id="toggle_menu">
             <label for="toggle_menu" class="flex j_sa">
-                <img src="./media/hamburguer.svg" alt="" class="hamburger_menu">
+                <img src="./media/hamburguer.svg" alt="" class="hamburger_menu unselected">
             </label>
             <aside class="menu_container flex_col j_sb_not-a">
                 <div class="flex j_flex-end">
@@ -94,26 +95,26 @@
                     <button>Registro</button>
                 </div>
                 <div class="options_aside">
-                    <h4>Ingresar tu restaurante</h4>
-                    <h4>Vuelvete un Domi</h4>
+                    <h4><a href="">Ingresar tu restaurante</a></h4>
+                    <h4><a href="">Vuelvete un Domi</a></h4>
                 </div>
                 <div class="footer_aside flex_col j_c">
-                    <img src="./media/Domi.svg" alt="logo" class="menu_logo">
+                    <img src="./media/Domi.svg" alt="logo" class="menu_logo unselected">
                 </div>
             </aside>
         </nav>
         <div class="bottom_header flex j_c">
-            <img src="./media/localitation.svg" alt="">
+            <img src="./media/localitation.svg" alt="" class="unselected">
             <span>Tangamandapio 🞃</span>
         </div>
     </header>
     <main>
         <section class="brand_label flex_col j_c
         ">
-            <img src="https://c0.klipartz.com/pngpicture/227/108/gratis-png-logo-kfc-red-rebranding-diseno-grafico-kfc.png" alt="mcdonalds" class="restaurant_logo">
+            <img src="https://c0.klipartz.com/pngpicture/227/108/gratis-png-logo-kfc-red-rebranding-diseno-grafico-kfc.png" alt="mcdonalds" class="restaurant_logo unselected">
             <h2 class="flex">
                 KFC
-                <img src="./media/star.svg" alt="rate">
+                <img src="./media/star.svg" alt="rate" class="unselected">
                 <strong>4.7</strong>
             </h2>
             <div class="signup_message flex j_c">
@@ -121,7 +122,7 @@
                 <h2> para pedir en </h2>
                 <h2><strong class="highlight">KFC</strong></h2>
             </div>
-            <img src="./media/trail.svg" alt="" class="trail">
+            <img draggable="false" src="./media/trail.svg" alt="" class="trail unselected">
         </section>
         <section class="popular shop">
             <h2>Populares</h2>
@@ -242,36 +243,10 @@
         <p>
             Copyright © 2024 Domi. Todos los derechos reservados.
         </p>
-        <div class="social_media">
+        <div class="social_media unselected">
             <img src="./media/ig_logo.svg" alt="">
             <img src="./media/x_logo.svg" alt="">
         </div>
     </footer>
-    <script defer>
-    function close_menu(){
-        const checkboxes = document.querySelectorAll("input[type='checkbox']")
-        checkboxes.forEach(function(checkbox){
-            checkbox.checked = false
-        })
-    };
-    function adjustPadding() {
-    const navbarHeight = window.innerHeight - document.documentElement.clientHeight;
-    const footer = document.querySelector("footer");
-    if (navbarHeight === 0) {
-        footer.style.paddingBottom = "95px"
-    } else {
-        footer.style.paddingBottom = navbarHeight + "px";
-    };
-    const asideElements = document.querySelectorAll("aside");
-    asideElements.forEach(function(aside) {
-        if (navbarHeight === 0) {
-        aside.style.paddingBottom = "95px";
-        } else {
-        aside.style.paddingBottom = navbarHeight + "px";
-        }
-    })};
-    adjustPadding();
-    document.addEventListener("resize", adjustPadding);
-    </script>
 </body>
 </html>
