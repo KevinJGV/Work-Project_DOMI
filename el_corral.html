@@ -1,253 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Corral Tangamandapio</title>
-    <link rel="icon" type="image" href="./media/Domi.svg">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <div class="advice flex unselected">
-        <img src="./media/Domi_unaviliable.svg" alt="">
-        <p class="max-screen">
-            <strong>Domi</strong> estara disponible proximamente para dispositivos de escritorio ;)
-        </p>
-        <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
-    </div>
-    <header>
-        <nav class="top_header flex j_sa">
-            <a href="./index.html" class="j_c unselected flex">
-                <img src="./media/Domi.svg" alt="logo" class="logo">
-            </a>
-            <input type="text" name="" id="search" placeholder="Busca comida en tu zona">
-            <input type="checkbox" id="toggle_cart">
-            <label for="toggle_cart" class="flex j_sa unselected">
-                <img src="./media/cart.svg" alt="" class="cart">
-            </label>
-            <aside class="cart_container flex_col j_sb_not-a">
-                <div class="flex j_sb">
-                    <h3>Carrito de compras</h3>
-                    <div onclick="close_menu()" class="exit_aside">
-                        <span>x</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>El Corral Tangamandapio</title>
+        <link rel="icon" type="image" href="./media/Domi.svg" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="advice flex unselected">
+            <img src="./media/Domi_unaviliable.svg" alt="" />
+            <p class="max-screen">
+                <strong>Domi</strong> estara disponible proximamente para
+                dispositivos de escritorio ;)
+            </p>
+            <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
+        </div>
+        <header>
+            <nav class="top_header flex j_sa">
+                <a href="./index.html" class="j_c unselected flex">
+                    <img src="./media/Domi.svg" alt="logo" class="logo" />
+                </a>
+                <input
+                    type="text"
+                    name=""
+                    id="search"
+                    placeholder="Busca comida en tu zona"
+                />
+                <input type="checkbox" id="toggle_cart" />
+                <label for="toggle_cart" class="flex j_sa unselected">
+                    <img src="./media/cart.svg" alt="" class="cart" />
+                </label>
+                <aside class="cart_container flex_col j_sb_not-a">
+                    <div class="flex j_sb">
+                        <h3>Carrito de compras</h3>
+                        <div onclick="close_menu()" class="exit_aside">
+                            <span>x</span>
+                        </div>
                     </div>
+                    <div class="body_aside">
+                        <div class="cart_item">
+                            <div class="cart_item_data flex j_sb">
+                                <div class="cart_item_data_text">
+                                    <h4>Mccombo Grande Mcpollo</h4>
+                                    <p>
+                                        Elige tú mccombo de hamburguesa con
+                                        pattie de pollo, mayonesa y lechuga con
+                                        papas grandes y gaseosa grande a elegir
+                                    </p>
+                                </div>
+                                <img
+                                    src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10"
+                                    alt=""
+                                    class="unselected"
+                                />
+                            </div>
+                            <div class="cart_item_order flex j_sb">
+                                <span class="item_price">$40.000 c/u</span>
+                                <span class="item_quantity flex j_sa">
+                                    <p>Cantidad:</p>
+                                    <input
+                                        type="text"
+                                        class="value"
+                                        value="3"
+                                    />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cart_item">
+                            <div class="cart_item_data flex j_sb">
+                                <div class="cart_item_data_text">
+                                    <h4>Mcflurry Oreo</h4>
+                                    <p>
+                                        Helado de vainilla con galleta oreo
+                                        triturada y topping de chocolate.
+                                    </p>
+                                </div>
+                                <img
+                                    src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10"
+                                    alt=""
+                                    class="unselected"
+                                />
+                            </div>
+                            <div class="cart_item_order flex j_sb">
+                                <span class="item_price">$10.900 c/u</span>
+                                <span class="item_quantity flex j_sa">
+                                    <p>Cantidad:</p>
+                                    <input
+                                        type="text"
+                                        class="value"
+                                        value="1"
+                                    />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_aside flex_col j_C">
+                        <div class="grid_paycheck grid">
+                            <span>Subtotal:</span>
+                            <span class="j_flex-end">$ 163.600</span>
+                            <span>Costos de envío:</span>
+                            <span class="j_flex-end">$ 4.800</span>
+                            <hr />
+                            <h3>Total:</h3>
+                            <h3 class="j_flex-end">$ 168.400</h3>
+                        </div>
+                        <button>Procesar pedido</button>
+                    </div>
+                </aside>
+                <input type="checkbox" id="toggle_menu" />
+                <label for="toggle_menu" class="flex j_sa">
+                    <img
+                        src="./media/hamburguer.svg"
+                        alt=""
+                        class="hamburger_menu unselected"
+                    />
+                </label>
+                <aside class="menu_container flex_col j_sb_not-a">
+                    <div class="flex j_flex-end">
+                        <div onclick="close_menu()" class="exit_aside">
+                            <span>x</span>
+                        </div>
+                    </div>
+                    <div class="buttons_aside flex_col j_c">
+                        <button>Ingreso</button>
+                        <button>Registro</button>
+                    </div>
+                    <div class="options_aside">
+                        <h4><a href="">Ingresar tu restaurante</a></h4>
+                        <h4><a href="">Vuelvete un Domi</a></h4>
+                    </div>
+                    <div class="footer_aside flex_col j_c">
+                        <img
+                            src="./media/Domi.svg"
+                            alt="logo"
+                            class="menu_logo unselected"
+                        />
+                    </div>
+                </aside>
+            </nav>
+            <div class="bottom_header flex j_c">
+                <img src="./media/localitation.svg" alt="" class="unselected" />
+                <span>Tangamandapio 🞃</span>
+            </div>
+        </header>
+        <main>
+            <section class="brand_label flex_col j_c">
+                <img
+                    src="https://www.unicentrocucuta.com/wp-content/uploads/2021/09/Logo-El-Corral.png"
+                    alt="mcdonalds"
+                    class="restaurant_logo unselected"
+                />
+                <h2 class="flex">
+                    El Corral
+                    <img src="./media/star.svg" alt="rate" class="unselected" />
+                    <strong>4.4</strong>
+                </h2>
+                <div class="signup_message flex j_c">
+                    <h2><strong>Ingresa</strong></h2>
+                    <h2>para pedir en</h2>
+                    <h2><strong class="highlight">El Corral</strong></h2>
                 </div>
-                <div class="body_aside">
-                    <div class="cart_item">
+                <img src="./media/trail.svg" alt="" class="trail unselected" />
+            </section>
+            <section class="filter_label flex card cart_item j_sb_not-a">
+                <article class="filter_label_bar flex_col j_se">
+                    <h3>Busca tu preferencia</h3>
+                    <input
+                        type="text"
+                        id="filter_search"
+                        name="filter_search"
+                        placeholder="La bacana, Fuzzy Smoothie, Hawaiana..."
+                    />
+                </article>
+                <h2 class="all_c">Ó</h2>
+                <article class="filter_label_options flex_col j_se_not-a">
+                    <h3 class="all_c">Selecciona tu preferencia</h3>
+                    <div class="grid">
+                        <input type="checkbox" name="" id="filter_1" />
+                        <label for="" id="filter_1">Perro</label>
+                        <input type="checkbox" name="" id="filter_2" />
+                        <label for="" id="filter_2">Agua</label>
+                        <input type="checkbox" name="" id="filter_3" />
+                        <label for="" id="filter_3">Tapo</label>
+                        <input type="checkbox" name="" id="filter_4" />
+                        <label for="" id="filter_4">Mano</label>
+                        <input type="checkbox" name="" id="filter_5" />
+                        <label for="" id="filter_5">Pizza</label>
+                        <input type="checkbox" name="" id="filter_6" />
+                        <label for="filter_6">Hamburguesa</label>
+                    </div>
+                </article>
+                <article class="filter_label_buttons flex_col j_sb_not-a">
+                    <button>Filtrar</button>
+                    <button>Limpiar</button>
+                </article>
+            </section>
+            <section class="popular shop">
+                <h2>Populares</h2>
+                <div class="grid grid_shop">
+                    <div class="cart_item card">
                         <div class="cart_item_data flex j_sb">
                             <div class="cart_item_data_text">
-                                <h4>Mccombo Grande Mcpollo</h4>
-                                <p>Elige tú mccombo de hamburguesa con pattie de pollo, mayonesa y lechuga con papas grandes y gaseosa grande a elegir</p>
+                                <h4>Corral En Combo</h4>
+                                <p>
+                                    Hamburguesa de 125 g de carne 100% de res,
+                                    con tomate en rodajas, cebolla en rodajas,
+                                    lechuga y salsas en pan ajonjolí + papas
+                                    medianas (corral o cascos) + bebida pet .
+                                </p>
                             </div>
-                            <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="" class="unselected">
+                            <img
+                                src="https://images.rappi.com/products/tmp7320769016250881430418448090.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$25.900 c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart_item card">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Todoterreno Clásica En Combo</h4>
+                                <p>
+                                    Hamburguesa de dos carnes de 125 g cada una
+                                    100% de res a la parrilla con salsa bbq,
+                                    queso mozzarella, lechuga, tomate, cebolla y
+                                    salsas + papas medianas (corral o cascos) +
+                                    bebida
+                                </p>
+                            </div>
+                            <img
+                                src="https://images.rappi.com/products/tmp621742521493676522542555465.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
                         </div>
                         <div class="cart_item_order flex j_sb">
                             <span class="item_price">$40.000 c/u</span>
-                            <span class="item_quantity flex j_sa">
-                                <p>Cantidad:</p>
-                                <input type="text" class="value" value="3">
-                            </span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
                         </div>
                     </div>
-                    <div class="cart_item">
+                    <div class="cart_item card">
                         <div class="cart_item_data flex j_sb">
                             <div class="cart_item_data_text">
-                                <h4>Mcflurry Oreo</h4>
-                                <p>Helado de vainilla con galleta oreo triturada y topping de chocolate.</p>
+                                <h4>Todoterreno Corralera</h4>
+                                <p>
+                                    Dos carnes de 125 gr a la parrilla con salsa
+                                    bbq, tocineta especial, cebolla grillé,
+                                    queso americano, salsa de tomate y salsa bbq
+                                    en pan artesano
+                                </p>
                             </div>
-                            <img src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10" alt="" class="unselected">
+                            <img
+                                src="https://images.rappi.com/products/tmp731751514890653244753572538.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
                         </div>
                         <div class="cart_item_order flex j_sb">
-                            <span class="item_price">$10.900 c/u</span>
-                            <span class="item_quantity flex j_sa">
-                                <p>Cantidad:</p>
-                                <input type="text" class="value" value="1">
-                            </span>
+                            <span class="item_price">$35.900 c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart_item card">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Malteada Café Moka Matiz</h4>
+                                <p>
+                                    473 Ml de malteada de chocolate moka y café
+                                    matiz con salsa de caramelo, crema
+                                    chantilly, 8 unidades de masmelos mini y 1
+                                    galleta con chips de chocolate.
+                                </p>
+                            </div>
+                            <img
+                                src="https://images.rappi.com/products/tmp73107473329876874572611948.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$15.000 c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="footer_aside flex_col j_C">
-                    <div class="grid_paycheck grid">
-                        <span>Subtotal:</span>
-                        <span class="j_flex-end">$ 163.600</span>
-                        <span>Costos de envío:</span>
-                        <span class="j_flex-end">$ 4.800</span>
-                        <hr>
-                        <h3>Total:</h3>
-                        <h3 class="j_flex-end">$ 168.400</h3>
+            </section>
+            <section class="new shop">
+                <h2>Novedades</h2>
+                <div class="grid grid_shop">
+                    <div class="cart_item card">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Corral Queso Tocineta En Combo</h4>
+                                <p>Corral Queso Tocineta En Combo</p>
+                            </div>
+                            <img
+                                src="https://images.rappi.com/products/tmp7360961014101916990723187717.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$35.000 c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
+                        </div>
                     </div>
-                    <button>Procesar pedido</button>
-                </div>
-            </aside>
-            <input type="checkbox" id="toggle_menu">
-            <label for="toggle_menu" class="flex j_sa">
-                <img src="./media/hamburguer.svg" alt="" class="hamburger_menu unselected">
-            </label>
-            <aside class="menu_container flex_col j_sb_not-a">
-                <div class="flex j_flex-end">
-                    <div onclick="close_menu()" class="exit_aside">
-                        <span>x</span>
+                    <div class="cart_item card">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Vaquero Especial En Combo</h4>
+                                <p>
+                                    Perro caliente con salchicha a la parrilla,
+                                    queso tipo mozzarella, tocineta, papa
+                                    callejera, cebolla picada y salsas en pan
+                                    perro + papas medianas (corral o en cascos)
+                                    + bebida pet
+                                </p>
+                            </div>
+                            <img
+                                src="https://images.rappi.com/products/tmp736096911443408875231462981.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$34.900 c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart_item card">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Corral</h4>
+                                <p>
+                                    Hamburguesa de 125 g de carne 100% de res,
+                                    con tomate en rodajas, cebolla en rodajas,
+                                    lechuga, salsa blanca, salsa de tomate y
+                                    mostaza en pan ajonjolí
+                                </p>
+                            </div>
+                            <img
+                                src="https://images.rappi.com/products/tmp732078755665795812795766257.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">20.900$ c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart_item card">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Hawaiana En Combo</h4>
+                                <p>
+                                    Hamburguesa de 125 g de carne 100% de res,
+                                    queso tipo mozzarella, piña, lechuga, salsa
+                                    blanca y salsa de tomate en pan ajonjolí +
+                                    papas medianas (corral o cascos) + bebida
+                                    pet
+                                </p>
+                            </div>
+                            <img
+                                src="https://images.rappi.com/products/tmp733938282607808328786371151.png?d=300x300&e=webp&q=10"
+                                alt=""
+                            />
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$35.900 c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="buttons_aside flex_col j_c">
-                    <button>Ingreso</button>
-                    <button>Registro</button>
-                </div>
-                <div class="options_aside">
-                    <h4><a href="">Ingresar tu restaurante</a></h4>
-                    <h4><a href="">Vuelvete un Domi</a></h4>
-                </div>
-                <div class="footer_aside flex_col j_c">
-                    <img src="./media/Domi.svg" alt="logo" class="menu_logo unselected">
-                </div>
-            </aside>
-        </nav>
-        <div class="bottom_header flex j_c">
-            <img src="./media/localitation.svg" alt="" class="unselected">
-            <span>Tangamandapio 🞃</span>
-        </div>
-    </header>
-    <main>
-        <section class="brand_label flex_col j_c
-        ">
-            <img src="https://www.unicentrocucuta.com/wp-content/uploads/2021/09/Logo-El-Corral.png" alt="mcdonalds" class="restaurant_logo unselected">
-            <h2 class="flex">
-                El Corral
-                <img src="./media/star.svg" alt="rate" class="unselected">
-                <strong>4.4</strong>
-            </h2>
-            <div class="signup_message flex j_c">
-                <h2><strong>Ingresa</strong></h2>
-                <h2> para pedir en </h2>
-                <h2><strong class="highlight">El Corral</strong></h2>
+            </section>
+        </main>
+        <footer class="flex_col j_se">
+            <p>Copyright © 2024 Domi. Todos los derechos reservados.</p>
+            <div class="social_media unselected">
+                <img src="./media/ig_logo.svg" alt="" />
+                <img src="./media/x_logo.svg" alt="" />
             </div>
-            <img src="./media/trail.svg" alt="" class="trail unselected">
-        </section>
-        <section class="popular shop">
-            <h2>Populares</h2>
-            <div class="grid grid_shop">
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Corral En Combo</h4>
-                            <p>Hamburguesa de 125 g de carne 100% de res, con tomate en rodajas, cebolla en rodajas, lechuga y salsas en pan ajonjolí + papas medianas (corral o cascos) + bebida pet
-                                .</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp7320769016250881430418448090.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$25.900 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Todoterreno Clásica En Combo</h4>
-                            <p>Hamburguesa de dos carnes de 125 g cada una 100% de res a la parrilla con salsa bbq, queso mozzarella, lechuga, tomate, cebolla y salsas + papas medianas (corral o cascos) + bebida</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp621742521493676522542555465.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$40.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Todoterreno Corralera</h4>
-                            <p>Dos carnes de 125 gr a la parrilla con salsa bbq, tocineta especial, cebolla grillé, queso americano, salsa de tomate y salsa bbq en pan artesano</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp731751514890653244753572538.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$35.900 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Malteada Café Moka Matiz</h4>
-                            <p>473 Ml de malteada de chocolate moka y café matiz con salsa de caramelo, crema chantilly, 8 unidades de masmelos mini y 1 galleta con chips de chocolate.</p>
-                        </div>
-                        <img src="473 Ml de malteada de chocolate moka y café matiz con salsa de caramelo, crema chantilly, 8 unidades de masmelos mini y 1 galleta con chips de chocolate." alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$15.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="new shop">
-            <h2>Novedades</h2>
-            <div class="grid grid_shop">
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Corral Queso Tocineta En Combo</h4>
-                            <p>Corral Queso Tocineta En Combo</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp7360961014101916990723187717.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$35.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Vaquero Especial En Combo</h4>
-                            <p>Perro caliente con salchicha a la parrilla, queso tipo mozzarella, tocineta, papa callejera, cebolla picada y salsas en pan perro + papas medianas (corral o en cascos) + bebida pet</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp736096911443408875231462981.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$34.900 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Corral</h4>
-                            <p>Hamburguesa de 125 g de carne 100% de res, con tomate en rodajas, cebolla en rodajas, lechuga, salsa blanca, salsa de tomate y mostaza en pan ajonjolí</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp732078755665795812795766257.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">20.900$ c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Hawaiana En Combo</h4>
-                            <p>Hamburguesa de 125 g de carne 100% de res, queso tipo mozzarella, piña, lechuga, salsa blanca y salsa de tomate en pan ajonjolí + papas medianas (corral o cascos) + bebida pet</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp733938282607808328786371151.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$35.900 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="flex_col j_se">
-        <p>
-            Copyright © 2024 Domi. Todos los derechos reservados.
-        </p>
-        <div class="social_media unselected">
-            <img src="./media/ig_logo.svg" alt="">
-            <img src="./media/x_logo.svg" alt="">
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
