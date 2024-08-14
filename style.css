@@ -510,6 +510,7 @@ button, label, .trending_item, .social_media img, .exit_aside {
 
     .filter_label_bar {
         flex-grow: 1;
+        gap: 5px;
     }
 
     #filter_search {
@@ -524,6 +525,7 @@ button, label, .trending_item, .social_media img, .exit_aside {
 
     .filter_label h2 {
         flex-grow: 0.3;
+        margin: 0;
     }
 
     .filter_label_options {
@@ -632,6 +634,21 @@ button, label, .trending_item, .social_media img, .exit_aside {
 
     footer {
         flex-direction: row;
+    }
+}
+
+@media (max-width:992px) {
+    .filter_label {
+        flex-flow: column;
+        gap: 10px;
+    }
+
+    .filter_label_options .grid {
+        gap: 5px;
+    }
+
+    .filter_label_buttons {
+        flex-flow: row;
     }
 }
 
