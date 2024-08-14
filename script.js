@@ -18,7 +18,6 @@ function adjustPadding() {
 }
 
 adjustPadding();
-document.addEventListener("resize", adjustPadding);
 
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
@@ -53,10 +52,8 @@ function apply_filters(filter_input, options, results_section) {
         comparer = comparer.trim();
         if (comparer === "" || string_to_compare === "") return false;
         comparer.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        console.log(new RegExp(comparer, "i").test(string_to_compare));
         return new RegExp(comparer, "i").test(string_to_compare);
-    }
-    debugger;
+    };
     let coincidencia = false;
     const GRID_PRODUCTS = results_section.querySelector(".grid_shop");
     GRID_PRODUCTS.childNodes.forEach((product) => {
@@ -134,3 +131,4 @@ document.querySelector("#button_clear").addEventListener("click", () => {
     );
     RESULTS_SECTION.classList.add("no_display");
 });
+
