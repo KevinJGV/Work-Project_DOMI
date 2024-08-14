@@ -9,6 +9,10 @@
     transition: all 0.2s cubic-bezier(.22, .61, .36, 1);
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -86,6 +90,11 @@ a {
     -moz-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+}
+
+.no_display {
+    display: none;
+    visibility: hidden;
 }
 
 button, label, .trending_item, .social_media img, .exit_aside {
@@ -352,6 +361,7 @@ button, label, .trending_item, .social_media img, .exit_aside {
     section h2{
         text-align: center;
         position: relative;
+        text-wrap: nowrap;
     }
     .trail {
         position: absolute;
@@ -531,14 +541,22 @@ button, label, .trending_item, .social_media img, .exit_aside {
         padding: 10px;
         background-color: white;
         border-radius: 15px;
+        user-select: none;
     }
 
-    #toggle_cart:checked + label + .cart_container {
-        left: 0;           
+    .filter_label_options label:hover {
+        outline: var(--orange_alternative) solid 1px;
     }
 
-    .filter_label_buttons {
-    
+    [id^="filter_"]:checked + label {
+        outline: var(--orange_alternative) solid;
+        background-color: var(--orange_alternative);
+        color: white;
+    }
+
+    .filter_label_buttons button:active{
+        background-color: var(--blue_main);
+        color: var(--yellow_main);
     }
 
 }

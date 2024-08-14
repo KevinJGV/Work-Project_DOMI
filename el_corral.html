@@ -178,23 +178,23 @@
                 <article class="filter_label_options flex_col j_se_not-a">
                     <h3 class="all_c">Selecciona tu preferencia</h3>
                     <div class="grid">
-                        <input type="checkbox" name="" id="filter_1" />
-                        <label for="" id="filter_1">Perro</label>
-                        <input type="checkbox" name="" id="filter_2" />
-                        <label for="" id="filter_2">Agua</label>
-                        <input type="checkbox" name="" id="filter_3" />
-                        <label for="" id="filter_3">Tapo</label>
-                        <input type="checkbox" name="" id="filter_4" />
-                        <label for="" id="filter_4">Mano</label>
-                        <input type="checkbox" name="" id="filter_5" />
-                        <label for="" id="filter_5">Pizza</label>
-                        <input type="checkbox" name="" id="filter_6" />
+                        <input type="checkbox" name="" id="filter_1" value="perro"/>
+                        <label for="filter_1">Perro</label>
+                        <input type="checkbox" name="" id="filter_2" value=""/>
+                        <label for="filter_2">Agua</label>
+                        <input type="checkbox" name="" id="filter_3" value=""/>
+                        <label for="filter_3">Tapo</label>
+                        <input type="checkbox" name="" id="filter_4" value=""/>
+                        <label for="filter_4">Mano</label>
+                        <input type="checkbox" name="" id="filter_5" value=""/>
+                        <label for="filter_5">Pizza</label>
+                        <input type="checkbox" name="" id="filter_6" value="hamburguesa"/>
                         <label for="filter_6">Hamburguesa</label>
                     </div>
                 </article>
-                <article class="filter_label_buttons flex_col j_sb_not-a">
-                    <button>Filtrar</button>
-                    <button>Limpiar</button>
+                <article class="filter_label_buttons flex_col j_se_not-a">
+                    <button id="button_clear" class="alternative_button">Limpiar</button>
+                    <button id="button_filter" class="alternative_button">Filtrar</button>
                 </article>
             </section>
             <section class="popular shop">
@@ -382,6 +382,31 @@
                         </div>
                         <div class="cart_item_order flex j_sb">
                             <span class="item_price">$35.900 c/u</span>
+                            <button>
+                                <strong>+</strong> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="results shop no_display">
+                <h2>Resultados</h2>
+                <div class="grid grid_shop">
+                    <h3 class="all_c alternative_button">No se encontrarón coincidencias</h3>
+                    <div class="cart_item card hamburguesa">
+                        <div class="cart_item_data flex j_sb">
+                            <div class="cart_item_data_text">
+                                <h4>Producto</h4>
+                                <p>Descripcion</p>
+                            </div>
+                            <img
+                                src=""
+                                alt="imagen"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="cart_item_order flex j_sb">
+                            <span class="item_price">$ c/u</span>
                             <button>
                                 <strong>+</strong> Agregar al carrito
                             </button>
