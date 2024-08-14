@@ -1,0 +1,13 @@
+{
+    "mcdonalds" : [],
+    "el_corral" : [
+        {
+            "type" : "malteada",
+            "name" : "Malteada Chokolate Jet",
+            "description" : "Malteada de 473 ml sabor a helado de chocolatina jet con salsa de chocolate, crema chantilly y 1 chocolatina jet de 25g.",
+            "price" : "17.000",
+            "image" : "https://images.rappi.com/products/tmp731074778569099314285450715.png?e=webp&d=511x511&q=85"
+        }
+    ],
+    "kfc" : []
+}
