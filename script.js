@@ -48,6 +48,15 @@ function get_filters_settings(motive) {
 }
 
 function apply_filters(filter_input, options, results_section) {
+    function comparing_strings(string_to_compare, comparer) {
+        string_to_compare = string_to_compare.trim();
+        comparer = comparer.trim();
+        if (comparer === "" || string_to_compare === "") return false;
+        comparer.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        console.log(new RegExp(comparer, "i").test(string_to_compare));
+        return new RegExp(comparer, "i").test(string_to_compare);
+    }
+    debugger;
     let coincidencia = false;
     const GRID_PRODUCTS = results_section.querySelector(".grid_shop");
     GRID_PRODUCTS.childNodes.forEach((product) => {
@@ -57,21 +66,15 @@ function apply_filters(filter_input, options, results_section) {
                 if (product.classList.contains(option.value))
                     option_finded = option.value;
             }
-            debugger;
-            PROBLEMA DE CONDICIONALES PENDIENTE
             if (
-                (product.querySelector("h4").textContent.length >=
-                    filter_input.value.length &&
-                    product
-                        .querySelector("h4")
-                        .textContent.toLowerCase()
-                        .includes(filter_input.value.toLowerCase())) ||
-                (product.querySelector("p").textContent.length >=
-                    filter_input.value.length &&
-                    product
-                        .querySelector("p")
-                        .textContent.toLowerCase()
-                        .includes(filter_input.value.toLowerCase())) ||
+                comparing_strings(
+                    product.querySelector("h4").textContent.toLowerCase(),
+                    filter_input.value.toLowerCase()
+                ) ||
+                comparing_strings(
+                    product.querySelector("p").textContent.toLowerCase(),
+                    filter_input.value.toLowerCase()
+                ) ||
                 option_finded
             ) {
                 product.classList.remove("no_display");
@@ -81,8 +84,13 @@ function apply_filters(filter_input, options, results_section) {
     });
     if (!coincidencia) {
         GRID_PRODUCTS.style["grid-template-columns"] = "1fr";
+        GRID_PRODUCTS.childNodes.forEach((product) => {
+            if (product.nodeName !== "#text" && product.nodeName !== "H3")
+                product.classList.add("no_display");
+        });
         GRID_PRODUCTS.children[0].classList.remove("no_display");
     } else {
+        GRID_PRODUCTS.style["grid-template-columns"] = "repeat(3, 1fr)";
         GRID_PRODUCTS.children[0].classList.add("no_display");
     }
 }
@@ -117,8 +125,12 @@ document.querySelector("#button_clear").addEventListener("click", () => {
     FILTER_OPTIONS.forEach((option) => (option.checked = false));
     NEW_SECTION.classList.remove("no_display");
     POPULAR_SECTION.classList.remove("no_display");
-    RESULTS_SECTION.querySelector(".grid_shop").forEach((product) =>
-        product.classList.add("no_display")
+    RESULTS_SECTION.querySelector(".grid_shop").childNodes.forEach(
+        (product) => {
+            if (product.nodeName !== "#text" && product.nodeName !== "H3") {
+                product.classList.add("no_display");
+            }
+        }
     );
     RESULTS_SECTION.classList.add("no_display");
 });
