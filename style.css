@@ -94,6 +94,9 @@ a {
 
 .no_display {
     display: none;
+}
+
+.hidden {
     visibility: hidden;
 }
 
@@ -238,6 +241,11 @@ button, label, .trending_item, .social_media img, .exit_aside {
         overflow-y: auto;
         overflow-x: hidden;
         margin-block: 20px;
+    }
+
+    .body_aside h3 {
+        opacity: 0.5;
+        font-weight: 400;
     }
 
     .cart_item {
