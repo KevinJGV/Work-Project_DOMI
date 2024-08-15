@@ -6,7 +6,7 @@
         <title>El Corral Tangamandapio</title>
         <link rel="icon" type="image" href="./media/Domi.svg" />
         <link rel="stylesheet" href="style.css" />
-        <script defer src="script.js"></script>
+        <script defer src="script.js" type="module"></script>
     </head>
     <body>
         <div class="advice flex unselected">
@@ -28,14 +28,14 @@
                     id="search"
                     placeholder="Busca comida en tu zona"
                 />
-                <input type="checkbox" id="toggle_cart" />
+                <input type="checkbox" id="toggle_cart" class="toggle_aside"/>
                 <label for="toggle_cart" class="flex j_sa unselected">
                     <img src="./media/cart.svg" alt="" class="cart" />
                 </label>
                 <aside class="cart_container flex_col j_sb_not-a">
                     <div class="flex j_sb">
                         <h3>Carrito de compras</h3>
-                        <div onclick="close_menu()" class="exit_aside">
+                        <div class="exit_aside">
                             <span>x</span>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                         <button>Procesar pedido</button>
                     </div>
                 </aside>
-                <input type="checkbox" id="toggle_menu" />
+                <input type="checkbox" id="toggle_menu" class="toggle_aside"/>
                 <label for="toggle_menu" class="flex j_sa">
                     <img
                         src="./media/hamburguer.svg"
@@ -91,7 +91,7 @@
                 </label>
                 <aside class="menu_container flex_col j_sb_not-a">
                     <div class="flex j_flex-end">
-                        <div onclick="close_menu()" class="exit_aside">
+                        <div class="exit_aside">
                             <span>x</span>
                         </div>
                     </div>
