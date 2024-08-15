@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 export function apply_filters(filter_input, options, results_section) {
     function comparing_strings(string_to_compare, comparer) {
@@ -7,7 +7,7 @@ export function apply_filters(filter_input, options, results_section) {
         if (comparer === "" || string_to_compare === "") return false;
         comparer.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         return new RegExp(comparer, "i").test(string_to_compare);
-    };
+    }
     let coincidencia = false;
     const GRID_PRODUCTS = results_section.querySelector(".grid_shop");
     GRID_PRODUCTS.childNodes.forEach((product) => {
@@ -61,4 +61,22 @@ export function get_filters_settings(motive) {
         NEW_SECTION,
         RESULTS_SECTION,
     ];
+}
+
+export async function set_filters_from_json() {
+    const { TYPES_OF_FOOD, Capitalize } = await import("./script.js");
+
+    const FILTERS_BUTTONS = document.querySelectorAll(".filter");
+    let counter = 0;
+    FILTERS_BUTTONS.forEach((button) => {
+        button.value = TYPES_OF_FOOD[counter];
+        button.nextElementSibling.textContent = Capitalize(
+            TYPES_OF_FOOD[counter]
+        );
+        counter++;
+    });
+}
+
+export async function initializeFilters() {
+    await set_filters_from_json();
 }
