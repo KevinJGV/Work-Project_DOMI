@@ -1,13 +1,1478 @@
 {
-    "mcdonalds" : [],
-    "el_corral" : [
+    "mcdonalds": [
         {
-            "type" : "malteada",
-            "name" : "Malteada Chokolate Jet",
-            "description" : "Malteada de 473 ml sabor a helado de chocolatina jet con salsa de chocolate, crema chantilly y 1 chocolatina jet de 25g.",
-            "price" : "17.000",
-            "image" : "https://images.rappi.com/products/tmp731074778569099314285450715.png?e=webp&d=511x511&q=85"
+            "type": "cafeteria",
+            "name": "Palito Queso",
+            "description": "",
+            "price": "6.900",
+            "image": "https://images.rappi.com/products/tmp606782633512940176820755103.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Croissant",
+            "description": "",
+            "price": "4.900",
+            "image": "https://images.rappi.com/products/tmp606782688220666272032586620.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Tulipe De Yogurt Y Arandanos",
+            "description": "Tulipe yogurt",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp606782806886385247665304595.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Mcpop Sugar X2",
+            "description": "Lleva dos mcpops masa de donut esponjoso cubierto de azúcar.",
+            "price": "6.900",
+            "image": "https://images.rappi.com/products/tmp6067828710498965582730315375.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Mcpop X2",
+            "description": "Lleva dos mcpops masa de donut esponjoso cubierto y con o sin relleno a elección.",
+            "price": "7.900",
+            "image": "https://images.rappi.com/products/tmp606782937966790241033089514.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Mcpop Sugar X3",
+            "description": "Lleva tres mcpops masa de donut esponjoso cubierto de azúcar.",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp606783359153197337291250878.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Mcpop X3",
+            "description": "Lleva tres mcpops masa de donut esponjoso cubierto y con o sin relleno a elección.",
+            "price": "11.500",
+            "image": "https://images.rappi.com/products/tmp606783393578090046543260878.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Cappuccino Mocca Grande",
+            "description": "Cappuccino mocca 12oz",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp606783903128376037296680142.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Cappuccino Arequipe Grande",
+            "description": "Cappuccino arequipe 12oz",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp606784177839410086523058188.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Milo Grande",
+            "description": "Milo tamaño grande",
+            "price": "7.900",
+            "image": "https://images.rappi.com/products/tmp6450901814052740909844061667.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Té En Agua Grande",
+            "description": "Té en agua 12oz",
+            "price": "5.500",
+            "image": "https://images.rappi.com/products/tmp606784324200827790510918188.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Té En Leche Grande",
+            "description": "Té en leche 12oz",
+            "price": "6.900",
+            "image": "https://images.rappi.com/products/tmp6067843712025474841337030392.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Americano Grande",
+            "description": "Americano 12oz",
+            "price": "5.900",
+            "image": "https://images.rappi.com/products/tmp6067845213047768935655814443.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Cappuccino Grande",
+            "description": "Cappuccino 12oz",
+            "price": "7.900",
+            "image": "https://images.rappi.com/products/tmp6067846615096514184808950917.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Latte Grande",
+            "description": "Latte 12oz",
+            "price": "6.900",
+            "image": "https://images.rappi.com/products/tmp606784818598326231355243260.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Tinto Grande",
+            "description": "Tinto 12oz",
+            "price": "4.000",
+            "image": "https://images.rappi.com/products/tmp606784989297161519855208655.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Café Con Leche Grande",
+            "description": "Café con leche 12oz",
+            "price": "5.000",
+            "image": "https://images.rappi.com/products/tmp6067850415778258176262077252.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Iced Americano Mediano",
+            "description": "Iced americano 16oz",
+            "price": "7.500",
+            "image": "https://images.rappi.com/products/tmp606785091000237975853695776.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Iced Latte Mediano",
+            "description": "Iced latte 16oz",
+            "price": "9.500",
+            "image": "https://images.rappi.com/products/tmp6067852312251764715490060428.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Soda De Mora Mediana",
+            "description": "Soda de mora 16oz",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp606785376767583928671449931.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Soda De Naranja Mediana",
+            "description": "Soda de naranja 16oz",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp606785522680643922795523822.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cafeteria",
+            "name": "Malteada De Café",
+            "description": "Malteada de café",
+            "price": "12.500",
+            "image": "https://images.rappi.com/products/tmp6067856514788339164938847698.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cajita feliz",
+            "name": "Cajita Feliz Hamburguesa",
+            "description": "Elige tu cajita feliz™ de hamburguesa de carne de 50gr, salsa de tomate, mostaza, cebolla triturada y pepinillos con papas kids, bebida del valle moraah, cascos de manzana y juguete.",
+            "price": "21.500",
+            "image": "https://images.rappi.com/products/tmp8017234814296682690931057173.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cajita feliz",
+            "name": "Cajita Feliz Hamburguesa Con Queso",
+            "description": "Elige tu cajita feliz™ de hamburguesa de carne de 50gr, queso cheddar amarillo, salsa de tomate, mostaza, cebolla triturada y pepinillos con papas kids, bebida del valle moraah, cascos de manzana y juguete.",
+            "price": "21.500",
+            "image": "https://images.rappi.com/products/tmp801724983959914950119517421.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cajita feliz",
+            "name": "Cajita Feliz  4 Chicken Mcnuggets",
+            "description": "Elige tu cajita feliz™ de 4 chicken mcnuggets con papas kids, bebida del valle moraah, cascos de manzana y juguete.",
+            "price": "21.500",
+            "image": "https://images.rappi.com/products/tmp801726494388274921966167088.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cajita feliz",
+            "name": "Cajita Feliz Mcfiesta Jr",
+            "description": "Elige tu cajita feliz™ de hamburguesa de carne de 50gr, mayonesa, lechuga y tomate con papas kids, bebida del valle moraah, cascos de manzana y juguete.",
+            "price": "21.500",
+            "image": "https://images.rappi.com/products/tmp801727697644650188465518793.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "cajita feliz",
+            "name": "Cajita Feliz Muslo De Pollo",
+            "description": "Elige tu cajita feliz™ de muslo de pollo con papas kids, bebida del valle moraah, cascos de manzana y juguete.",
+            "price": "21.500",
+            "image": "https://images.rappi.com/products/tmp801729578210661610239016259.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Doble Hamburguesa Con Queso",
+            "description": "Lleva una hamburguesa con dos carnes de 50gr c/u, dos tajadas de queso cheddar, salsa de tomate, mostaza, cebolla picada y pepinillos, papas grandes y gaseosa grande (21oz) a elección.",
+            "price": "26.900",
+            "image": "https://images.rappi.com/products/tmp5361280911252664021404063328.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Big Mac",
+            "description": "Elige tu mccombo™ con hamburguesa con dos carnes de res de 50gr c/u, cebolla, pepinillos, lechuga, queso cheddar, pan en el centro y nuestra salsa especial big mac con papas grandes y gaseosa grande a elegir",
+            "price": "30.900",
+            "image": "https://images.rappi.com/products/tmp573061269670002648711336784.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Doble Cuarto De Libra",
+            "description": "Elige tu mccombo™ de hamburguesa con dos carnes de res de 125gr c/u, pepinillos, cebolla, doble queso cheddar, salsa de tomate y mostaza con papas grandes y gaseosa grande a elegir",
+            "price": "40.900",
+            "image": "https://images.rappi.com/products/tmp573062286924396462477573396.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Mcnifica",
+            "description": "Elige tu mccombo™ de hamburguesa con carne de res de 125gr, queso cheddar, lechuga, tomate, cebolla, salsa de tomate, mayonesa y mostaza con papas grandes y gaseosa grande a elegir",
+            "price": "33.900",
+            "image": "https://images.rappi.com/products/tmp5730630916524471561078514279.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Mcnifica Doble",
+            "description": "Elige tu mccombo™ de hamburguesa con dos carne de res de 125gr c/u, queso cheddar, lechuga, tomate, cebolla, salsa de tomate, mayonesa y mostaza con papas grandes y gaseosa grande a elegir",
+            "price": "40.900",
+            "image": "https://images.rappi.com/products/tmp5730641216774715964899719942.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Mcbacon",
+            "description": "Elige tu mccombo™ de hamburguesa con dos carnes de res de 50gr c/u, tocineta, queso cheddar, cebolla, salsa de tomate y mostaza con papas grandes y gaseosa grande a elegir",
+            "price": "30.900",
+            "image": "https://images.rappi.com/products/tmp573065156010176295569088492.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Triple Hamburguesa Con Queso",
+            "description": "Elige tu mccombo™ de hamburguesa con tres carne de 50gr c/u, doble queso cheddar, cebolla, pepinillos, salsa de tomate y mostaza con papas grandes y gaseosa grande a elegir",
+            "price": "29.900",
+            "image": "https://images.rappi.com/products/tmp5730678811479053696257077529.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Chicken Mcnuggets De 10 Piezas",
+            "description": "Elige tu mccombo™ de 10 piezas de pollo apanados acompañados de papas grandes y gaseosa grande a elegir",
+            "price": "32.900",
+            "image": "https://images.rappi.com/products/tmp5730702816858983046076744798.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Chicken Mcnuggets De 20 Piezas",
+            "description": "Elige tu mccombo™ de 20 piezas de pollo apanados con papas grandes y gaseosa grande a elegir.",
+            "price": "53.900",
+            "image": "https://images.rappi.com/products/tmp5730707616940152551941416702.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Pollo Mccrispy Legend 1 Pollo",
+            "description": "Elige tu mccombo de hamburguesa con un pollo crispy de 125gr, salsa cbo, cebolla crispy,  tocineta, queso y lechuga con papas grandes y gaseosa grande a elegir.",
+            "price": "38.900",
+            "image": "https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Pollo Mccrispy Legend 2 Pollos",
+            "description": "Elige tu mccombo de hamburguesa con dos pollos crispy de 125gr c/u, salsa cbo, cebolla crispy,  tocineta, queso y lechuga con papas grandes y gaseosa grande a elegir.",
+            "price": "43.900",
+            "image": "https://images.rappi.com/products/tmp573071878628211248923272360.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Pollo Mccrispy Deluxe Spicy",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, salsa spicy pepper, lechuga y tomate con papas grandes y gaseosa grande a elegir",
+            "price": "34.900",
+            "image": "https://images.rappi.com/products/tmp573072388945504429467722110.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Pollo Mccrispy Deluxe",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, mayonesa, lechuga y tomate con papas grandes y gaseosa grande a elegir",
+            "price": "34.900",
+            "image": "https://images.rappi.com/products/tmp57307287108094046412501216.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Pollo Mccrispy Classic",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, mayonesa y pepinillos con papas grandes y gaseosa grande a elegir",
+            "price": "31.900",
+            "image": "https://images.rappi.com/products/tmp5730733713324708204228108195.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Pollo Mccrispy Spicy",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, salsa spicy y pepinillos con papas grandes y gaseosa grande a elegir",
+            "price": "31.900",
+            "image": "https://images.rappi.com/products/tmp573073851498612887877562499.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande 2 Piezas De Pollo",
+            "description": "Elige tu mccombo™ con 2 piezas de pollo crocante con papas grandes y gaseosa grande a elegir",
+            "price": "22.900",
+            "image": "https://images.rappi.com/products/tmp573074343068730555212421136.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande 3 Piezas De Pollo",
+            "description": "Elige tu mccombo™ con 3 piezas de pollo crocante con papas grandes y gaseosa grande a elegir",
+            "price": "29.900",
+            "image": "https://images.rappi.com/products/tmp573074782438456552654341958.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Medio Pollo",
+            "description": "Elige tu mccombo™ con medio pollo crocante con dos papas grandes y una gaseosa grande a elegir",
+            "price": "37.900",
+            "image": "https://images.rappi.com/products/tmp5730752618372568223261826136.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Grande Pollo Completo",
+            "description": "Elige tu mccombo™ con pollo completo crocante con tres papas grandes y una gaseosa grande a elegir",
+            "price": "64.900",
+            "image": "https://images.rappi.com/products/tmp5730757615490629021284292713.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Big Mac",
+            "description": "Elige tu mccombo™ de hamburguesa con dos carnes de res de 50gr c/u, cebolla, pepinillos, lechuga, queso cheddar, pan en el centro y nuestra salsa especial big mac con papas medianas y gaseosa en vaso 16oz",
+            "price": "27.900",
+            "image": "https://images.rappi.com/products/tmp573076322120979078395979291.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Cuarto De Libra",
+            "description": "Elige tu mccombo™ de hamburguesa con carne de res de 125gr, cebolla, pepinillos, queso cheddar, salsa de tomate y mostaza con papas medianas y gaseosa en vaso 16oz",
+            "price": "32.900",
+            "image": "https://images.rappi.com/products/tmp5730768213133978004166082314.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Doble Cuarto De Libra",
+            "description": "Elige tu mccombo™ de hamburguesa con dos carnes de res de 125gr c/u, pepinillos, cebolla, doble queso cheddar, salsa de tomate y mostaza con papas medianas y gaseosa en vaso 16oz",
+            "price": "37.900",
+            "image": "https://images.rappi.com/products/tmp573077342973072432439285626.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Mcnifica",
+            "description": "Elige tu mccombo™ de hamburguesa con una carne de res de 125gr, queso cheddar, lechuga, tomate, cebolla, salsa de tomate, mayonesa y mostaza con papas medianas y gaseosa en vaso 16oz",
+            "price": "30.900",
+            "image": "https://images.rappi.com/products/tmp5730778714363991614090543796.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Mcnifica Doble",
+            "description": "Elige tu mccombo™ de hamburguesa con dos carne de res de 125gr c/u, queso cheddar, lechuga, tomate, cebolla, salsa de tomate, mayonesa y mostaza con papas medianas y gaseosa en vaso 16oz",
+            "price": "37.900",
+            "image": "https://images.rappi.com/products/tmp5730784216380966474459633645.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Mcbacon",
+            "description": "Elige tu mccombo™ de hamburguesa con dos carnes de res de 50gr c/u, tocineta, queso cheddar, cebolla, salsa de tomate y mostaza con papas medianas y gaseosa en vaso 16oz",
+            "price": "27.900",
+            "image": "https://images.rappi.com/products/tmp573078977273047441023366584.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Triple Hamburguesa Con Queso",
+            "description": "Elige tu mccombo™ de hamburguesa con triple carne de 50gr c/u, doble queso cheddar, cebolla, pepinillos, salsa de tomate y mostaza con papas medianas y gaseosa en vaso 16oz",
+            "price": "26.900",
+            "image": "https://images.rappi.com/products/tmp5730800111923610079905901387.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Mcpollo",
+            "description": "",
+            "price": "26.900",
+            "image": "https://images.rappi.com/products/tmp5730812311287229421252124188.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Chicken Mcnuggets De 10 Piezas",
+            "description": "Elige tu mccombo™ de 10 piezas de pollo apanados acompañados de papas medianas y gaseosa en vaso de 16oz.",
+            "price": "29.900",
+            "image": "https://images.rappi.com/products/tmp5730826913415975882652994557.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Chicken Mcnuggets De 20 Piezas",
+            "description": "Elige tu mccombo™ de 20 piezas de pollo apanados con papas medianas y gaseosa mediana a elegir.",
+            "price": "50.900",
+            "image": "https://images.rappi.com/products/tmp5730841612994035785622915711.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Pollo Mccrispy Legend 1 Pollo",
+            "description": "Elige tu mccombo de hamburguesa con un pollo crispy de 125gr, salsa cbo, cebolla crispy,  tocineta, queso y lechuga con papas medianas y gaseosa mediana a elegir.",
+            "price": "35.900",
+            "image": "https://images.rappi.com/products/tmp5730860912867598301306903449.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Pollo Mccrispy Legend 2 Pollos",
+            "description": "Elige tu mccombo de hamburguesa con dos pollos crispy de 125gr c/u, salsa cbo, cebolla crispy,  tocineta, queso y lechuga con papas medianas y gaseosa mediana a elegir.",
+            "price": "40.900",
+            "image": "https://images.rappi.com/products/tmp573087647170693642522131196.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Pollo Mccrispy Deluxe Spicy",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, salsa spicy pepper, lechuga y tomate con papas medianas y gaseosa mediana a elegir",
+            "price": "31.900",
+            "image": "https://images.rappi.com/products/tmp5730894916120384566785773138.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Pollo Mccrispy Deluxe",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, mayonesa, lechuga y tomate con papas medianas y gaseosa mediana a elegir",
+            "price": "31.900",
+            "image": "https://images.rappi.com/products/tmp573091772347637052694741537.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Pollo Mccrispy Classic",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, mayonesa y pepinillos con papas medianas y gaseosa mediana a elegir",
+            "price": "28.900",
+            "image": "https://images.rappi.com/products/tmp5730935815638689404881072267.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Pollo Mccrispy Spicy",
+            "description": "Elige tu mccombo de hamburguesa con pollo apanado, salsa spicy y pepinillos con papas medianas y gaseosa mediana a elegir",
+            "price": "28.900",
+            "image": "https://images.rappi.com/products/tmp573095716888843048255662228.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano 2 Piezas De Pollo",
+            "description": "Elige tu mccombo\\s+tm\\s-  de 2 piezas de pollo crocante con papas medianas y gaseosa en vaso de 16oz.",
+            "price": "19.900",
+            "image": "https://images.rappi.com/products/tmp573097879045667747141762425.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano 3 Piezas De Pollo",
+            "description": "Elige tu mccombo™ de 3 piezas de pollo crocante con papas medianas y gaseosa en vaso de 16oz.",
+            "price": "26.900",
+            "image": "https://images.rappi.com/products/tmp573099537615771396155921202.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Medio Pollo",
+            "description": "Elige tu mccombo™ de medio pollo crocante con dos papas medianas y gaseosa en vaso de 16oz.",
+            "price": "32.900",
+            "image": "https://images.rappi.com/products/tmp573101516183261042971924084.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Mccombo Mediano Pollo Completo",
+            "description": "Elige tu mccombo™ de pollo completo crocante con tres papas medianas y una gaseosa en vaso de 16oz.",
+            "price": "60.900",
+            "image": "https://images.rappi.com/products/tmp573103708426537148124837098.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Hamburguesa Sencilla",
+            "description": "Hamburguesa con carne de 50gr, cebolla, pepinillos, salsa de tomate y mostaza.",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp573164271222525981562450947.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Hamburguesa Con Queso",
+            "description": "Hamburguesa con carne de 50gr, queso cheddar, cebolla, pepinillos, salsa de tomate y mostaza.",
+            "price": "10.900",
+            "image": "https://images.rappi.com/products/tmp5731647213627876551096537326.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Mcfiesta",
+            "description": "Hamburguesa con carne de res de 50gr, ketchup, lechuga y tomate",
+            "price": "9.900",
+            "image": "https://images.rappi.com/products/tmp5731652011154384292070102168.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Mcfiesta Doble",
+            "description": "Hamburguesa con carne de res de 50gr, ketchup, lechuga y tomate",
+            "price": "15.900",
+            "image": "https://images.rappi.com/products/tmp573165706222036181634116802.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Big Mac",
+            "description": "Hamburguesa con dos carnes de 50gr c/u, cebolla, pepinillos, lechuga, queso cheddar, pan en el centro y nuestra salsa especial big mac",
+            "price": "22.900",
+            "image": "https://images.rappi.com/products/tmp573166114134896451801780538.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Cuarto De Libra Con Queso",
+            "description": "Hamburguesa con carne de res de 125gr, doble queso cheddar, pepinillos, cebolla, salsa de tomate y mostaza.",
+            "price": "27.900",
+            "image": "https://images.rappi.com/products/tmp5731665111206834836722530500.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Doble Cuarto De Libra Con Queso",
+            "description": "Hamburguesa con dos carnes de res de 125gr c/u, doble queso cheddar, cebolla, pepinillos, salsa de tomate y mostaza.",
+            "price": "32.900",
+            "image": "https://images.rappi.com/products/tmp573167071755340822513028580.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Mcnifica",
+            "description": "Hamburguesa con carne de res de 125gr, queso cheddar, lechuga, tomate, cebolla, salsa de tomate, mayonesa y mostaza",
+            "price": "25.900",
+            "image": "https://images.rappi.com/products/tmp573167668113798140129253158.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Doble Mcnifica",
+            "description": "Hamburguesa con dos carne de res de 125gr c/u, queso cheddar, lechuga, tomate, cebolla, salsa de tomate, mayonesa y mostaza",
+            "price": "32.900",
+            "image": "https://images.rappi.com/products/tmp573168319993593392394765168.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Mcbacon",
+            "description": "Hamburguesa con dos carnes de res de 50gr c/u, tocineta, queso cheddar, cebolla, salsa de tomate y mostaza",
+            "price": "23.900",
+            "image": "https://images.rappi.com/products/tmp5731689614838851802968700603.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Hamburguesa Doble Con Queso",
+            "description": "Hamburguesa con doble carne de 50gr c/u, queso cheddar, cebolla, pepinillos, salsa de tomate y mostaza",
+            "price": "12.900",
+            "image": "https://images.rappi.com/products/tmp5731699415227845292041820408.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Triple Hamburguesa Con Queso",
+            "description": "Hamburguesa con tres carne de 50gr c/u, dos queso cheddar, cebolla, pepinillos, salsa de tomate y mostaza",
+            "price": "22.900",
+            "image": "https://images.rappi.com/products/tmp573170328367836237040905914.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Mcpollo",
+            "description": "Hamburguesa con pattie de pollo, mayonesa y lechuga",
+            "price": "21.900",
+            "image": "https://images.rappi.com/products/tmp5758913614818394815428723429.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Pollo Mccrispy Deluxe Spicy",
+            "description": "Hamburguesa con pollo apanado, salsa spicy pepper, lechuga y tomate",
+            "price": "26.900",
+            "image": "https://images.rappi.com/products/tmp5731716015798262196512825175.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Pollo Mccrispy Deluxe",
+            "description": "Hamburguesa con pollo apanado, mayonesa, lechuga y tomate",
+            "price": "26.900",
+            "image": "https://images.rappi.com/products/tmp5731719617224692837966881074.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Pollo Mccrispy Classic",
+            "description": "Hamburguesa con pollo apanado, mayonesa y pepinillos",
+            "price": "23.900",
+            "image": "https://images.rappi.com/products/tmp573172281044272958853821449.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Pollo Mccrispy Spicy",
+            "description": "Hamburguesa con pollo apanado, salsa spicy y pepinillos",
+            "price": "23.900",
+            "image": "https://images.rappi.com/products/tmp573172568989827990602151718.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Bucket 4 Piezas De Pollo",
+            "description": "Lleva un bucket con cuatro (4) piezas de pollo y dos (2) papas pequeñas.",
+            "price": "32.900",
+            "image": "https://images.rappi.com/products/tmp801704837817509865174203836.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Bucket 6 Piezas De Pollo",
+            "description": "Lleva un bucket con seis (6) piezas de pollo y tres (3) papas pequeñas.",
+            "price": "42.900",
+            "image": "https://images.rappi.com/products/tmp8017057714449135236551663640.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Bucket 8 Piezas De Pollo",
+            "description": "Lleva un bucket con ocho (8) piezas de pollo y cuatro (4) papas pequeñas.",
+            "price": "62.900",
+            "image": "https://images.rappi.com/products/tmp8017070014272591478776772554.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Bucket 4 Piezas De Pollo + Bebidas",
+            "description": "Lleva un bucket con cuatro (4) piezas de pollo, dos (2) papas pequeñas y dos (2) bebidas pequeñas (12oz) a elección.",
+            "price": "37.900",
+            "image": "https://images.rappi.com/products/tmp801708127281434916694929297.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Bucket 6 Piezas De Pollo + Bebidas",
+            "description": "Lleva un bucket con seis (6) piezas de pollo, tres (3) papas pequeñas y tres (3) bebidas pequeñas (12oz) a elección.",
+            "price": "48.900",
+            "image": "https://images.rappi.com/products/tmp8017094917703976739352380004.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Bucket 8 Piezas De Pollo + Bebidas",
+            "description": "Lleva un bucket con ocho (8) piezas de pollo, cuatro (4) papas pequeñas y cuatro (4) bebidas pequeñas (12oz) a elección.",
+            "price": "68.900",
+            "image": "https://images.rappi.com/products/tmp8017116214655957412792646190.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Bucket 6 Piezas De Pollo + 20 Chicken Mcnuggets + Bebidas",
+            "description": "Lleva un bucket con seis (6) piezas de pollo, veinte (20) chicken mcnuggets, tres (3) papas pequeñas y tres (3) bebidas pequeñas (12oz) a elección.",
+            "price": "77.900",
+            "image": "https://images.rappi.com/products/tmp801714333275127041605294370.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "1 Pieza De Pollo Crocante",
+            "description": "Una (1) pieza de pollo crocante",
+            "price": "7.500",
+            "image": "https://images.rappi.com/products/tmp575885814061688963753300882.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "2 Piezas De Pollo Crocante",
+            "description": "Dos (2) piezas de pollo crocante",
+            "price": "14.900",
+            "image": "https://images.rappi.com/products/tmp575885945783185159650115374.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "3 Piezas De Pollo Crocante",
+            "description": "Tres (3) piezas de pollo crocante",
+            "price": "21.900",
+            "image": "https://images.rappi.com/products/tmp5758860711133191916911723652.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "6 Piezas De Pollo Crocante",
+            "description": "Seis (6) piezas de pollo crocante",
+            "price": "41.800",
+            "image": "https://images.rappi.com/products/tmp5758862412038302372265185190.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Medio Pollo Crocante",
+            "description": "Cuatro (4) piezas de pollo crocante",
+            "price": "30.900",
+            "image": "https://images.rappi.com/products/tmp575886424724556399950588806.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Pollo Crocante Completo",
+            "description": "Ocho (8) piezas de pollo crocante",
+            "price": "55.900",
+            "image": "https://images.rappi.com/products/tmp5758865913855960369450011179.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Chicken Mcnuggets 4 Piezas",
+            "description": "Cuatro (4) piezas de chicken mcnuggets",
+            "price": "11.500",
+            "image": "https://images.rappi.com/products/tmp5758868012843781614959597237.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "pollo",
+            "name": "Chicken Mcnuggets 10 Piezas",
+            "description": "Diez (10) piezas de chicken mcnuggets",
+            "price": "24.900",
+            "image": "https://images.rappi.com/products/tmp5758869314839199317105111510.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Sundae Mora",
+            "description": "Helado de vainilla con topping de mora.",
+            "price": "7.900",
+            "image": "https://images.rappi.com/products/tmp7871428010766138706670201118.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Sundae Lulo",
+            "description": "Helado de vainilla con topping de lulo.",
+            "price": "7.900",
+            "image": "https://images.rappi.com/products/tmp773938534904480273984200870.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Mcflurry Con Milo",
+            "description": "Helado de vainilla con milo en polvo granulado y trocitos de galleta milo choco intense.",
+            "price": "11.900",
+            "image": "https://images.rappi.com/products/tmp6500432014694702663380517328.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Mcflurry Oreo",
+            "description": "Helado de vainilla con galleta oreo triturada y topping de chocolate.",
+            "price": "11.900",
+            "image": "https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Mcflurry M&m's",
+            "description": "Helado de vainilla con chocolates m&m's y topping de arequipe.",
+            "price": "11.900",
+            "image": "https://images.rappi.com/products/tmp4023307914650709885206655635.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada Con Milo",
+            "description": "Malteada con helado de vainilla, milo en polvo granulado y trocitos de galleta milo choco intense.",
+            "price": "12.500",
+            "image": "https://images.rappi.com/products/tmp4647167317525257261950414349.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Arequipe",
+            "description": "Malteada con helado de vainilla y topping de arequipe.",
+            "price": "12.500",
+            "image": "https://images.rappi.com/products/tmp402331055881320100562655280.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Oreo",
+            "description": "Malteada con helado de vainilla, galleta oreo triturada y topping de chocolate.",
+            "price": "12.500",
+            "image": "https://images.rappi.com/products/tmp4023309311767826187076945549.png?d=300x300&e=webp&q=10"
         }
     ],
-    "kfc" : []
+    "el_corral": [
+        {
+            "type": "acompañamientos",
+            "name": "Papas Corral Grandes",
+            "description": "Las papas más crocantes, para acompañar lo que más te gusta.",
+            "price": "8.500",
+            "image": "https://images.rappi.com/products/tmp5833734812591662868425934863.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "acompañamientos",
+            "name": "Yuca Con Suero",
+            "description": "Crocantes yucas para que acompañes lo que más te gusta",
+            "price": "11.000",
+            "image": "https://images.rappi.com/products/tmp8065115911091294899136763096.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "acompañamientos",
+            "name": "Papas Corral Medianas",
+            "description": "Las papas más crocantes, para acompañar lo que más te gusta",
+            "price": "7.000",
+            "image": "https://images.rappi.com/products/tmp5833734213891733836438918931.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "acompañamientos",
+            "name": "Yucas Sin Suero",
+            "description": "Crocantes yucas para que acompañes lo que más te gusta",
+            "price": "9.500",
+            "image": "https://images.rappi.com/products/tmp5833737616822872372193170065.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "acompañamientos",
+            "name": "Papas En Casco Grandes",
+            "description": "Las papas en cascos más crocantes, para acompañar lo que más te gusta",
+            "price": "8.500",
+            "image": "https://images.rappi.com/products/tmp583373549879042035899959314.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "acompañamientos",
+            "name": "Papas En Casco Medianas",
+            "description": "Las papas en cascos más crocantes, para acompañar lo que más te gusta",
+            "price": "7.000",
+            "image": "https://images.rappi.com/products/tmp5833736011729201909968760321.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "acompañamientos",
+            "name": "Anillos De Cebolla",
+            "description": "Crujientes anillos de cebolla apanados",
+            "price": "12.000",
+            "image": "https://images.rappi.com/products/tmp5833736815101740749116920445.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Mexicana Lomo + Agua",
+            "description": "Ensalada con 154 g de lomo de res, guacamole, frijol refrito, maíz, tomate, tortillas de maíz, lechuga y suero costeño + agua",
+            "price": "32.900",
+            "image": "https://images.rappi.com/products/tmp734153602492888568113673486.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Mexicana Lomo",
+            "description": "Ensalada con 154 g de lomo de res, guacamole, frijol refrito, maíz, tomate, tortillas de maíz, lechuga y suero costeño",
+            "price": "30.900",
+            "image": "https://images.rappi.com/products/tmp5834025212476147461247563954.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Cobb + Agua",
+            "description": "Ensalada con 154 g de pechuga de pollo, tocineta, huevo en trozos, jamón, queso tipo mozzarella, aguacate, tomate, maíz, lechuga y aderezo + agua",
+            "price": "33.900",
+            "image": "https://images.rappi.com/products/tmp7341551511376911966198048205.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Corral En Combo",
+            "description": "154 G de pechuga de pollo, huevo en rodajas, jamón, queso mozzarella y queso parmesano, pepinillos, tomate, maíz y lechuga + papas medianas (corral o en cascos) + bebida pet",
+            "price": "36.900",
+            "image": "https://images.rappi.com/products/tmp7322736414810448837185775802.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Mexicana Vek + Agua",
+            "description": "Ensalada con guacamole, frijol refrito, tortillas de maíz, tomate, maíz, lechuga y suero costeño + agua",
+            "price": "25.900",
+            "image": "https://images.rappi.com/products/tmp734152462616457392340426552.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Mexicana Vek En Combo",
+            "description": "Ensalada con guacamole, frijol refrito, tortillas de maíz, tomate, maíz, lechuga y suero costeño + papas medianas (corral o en cascos) + bebida pet",
+            "price": "30.900",
+            "image": "https://images.rappi.com/products/tmp7322750115769351683881418731.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Corral",
+            "description": "Ensalada con 154 g de pechuga de pollo, huevo en rodajas, jamón, una combinación de queso tipo mozzarella y queso parmesano, pepinillos, tomate, maíz, lechuga y aderezo",
+            "price": "29.900",
+            "image": "https://images.rappi.com/products/tmp583402393717677123437286705.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Cobb",
+            "description": "Ensalada con 154 g de pechuga de pollo, tocineta, huevo en trozos, jamón, queso tipo mozzarella, aguacate, tomate, maíz, lechuga y aderezo",
+            "price": "31.900",
+            "image": "https://images.rappi.com/products/tmp583402736254408332959544731.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Cobb En Combo",
+            "description": "154 G de pechuga de pollo, tocineta, huevo en trozos, jamón, queso tipo mozzarella, aguacate, tomate, maíz, lechuga y aderezo + papas medianas (corral o en cascos) + bebida pet",
+            "price": "38.900",
+            "image": "https://images.rappi.com/products/tmp732272711611829874817230483.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Corral + Agua",
+            "description": "Ensalada con 154 g de pechuga de pollo, huevo en rodajas, jamón, una combinación de queso tipo mozzarella y queso parmesano, pepinillos, tomate, maíz, lechuga y aderezo + agua",
+            "price": "31.900",
+            "image": "https://images.rappi.com/products/tmp734152151668932490124074663.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Mexicana Lomo En Combo",
+            "description": "Ensalada con 154 g de lomo de res, guacamole, frijol refrito, maíz, tomate, tortillas de maíz, lechuga y suero costeño + papas medianas (corral o en cascos) + bebida pet",
+            "price": "37.900",
+            "image": "https://images.rappi.com/products/tmp732274343275456905497405234.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "ensaladas",
+            "name": "Ensalada Mexicana Vek",
+            "description": "Ensalada con guacamole, frijol refrito, tortillas de maíz, tomate, maíz, lechuga y suero costeño",
+            "price": "23.900",
+            "image": "https://images.rappi.com/products/tmp5833988313344564267067822420.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Clásica En Combo",
+            "description": "Hamburguesa de dos carnes de 125 g cada una 100% de res a la parrilla con salsa bbq, queso mozzarella, lechuga, tomate, cebolla y salsas + papas medianas (corral o cascos) + bebida",
+            "price": "40.900",
+            "image": "https://images.rappi.com/products/tmp621742521493676522542555465.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Callejera En Combo",
+            "description": "Hamburguesa de dos carnes de 125 g cada una 100% de res a la parrilla con salsa bbq, tocineta, queso mozzarella, papas callejera y salsas + papas medianas(corral o cascos) + bebida",
+            "price": "42.900",
+            "image": "https://images.rappi.com/products/tmp621741992244417355477065000.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Corralera En Combo",
+            "description": "Dos carnes de 125 gr a la parrilla con salsa bbq, tocineta especial, cebolla grillé, queso americano y salsas en pan artesano + papas medianas + bebida pet",
+            "price": "42.900",
+            "image": "https://images.rappi.com/products/tmp7318755617966299843064481.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Tocineta En Combo",
+            "description": "Hamburguesa de dos carnes de 125 g cada una 100% de res a la parrilla con salsa bbq, tocineta, queso mozzarella, verduras y salsas + papas medianas (corral o cascos) + bebida",
+            "price": "42.900",
+            "image": "https://images.rappi.com/products/tmp621741425294348681972539734.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Corralera Agrandad En Combo",
+            "description": "Dos carnes de 165 gr a la parrilla con salsa bbq, tocineta especial, cebolla grillé, queso americano y salsas en pan artesano + papas medianas + bebida pet",
+            "price": "48.900",
+            "image": "https://images.rappi.com/products/tmp731754047701624829575284319.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Clásica",
+            "description": "Hamburguesa de dos carnes de 125 g cada una 100% de res a la parrilla con salsa bbq, queso mozzarella, lechuga, tomate en rodajas, cebolla en rodajas y salsas",
+            "price": "33.900",
+            "image": "https://images.rappi.com/products/tmp6217430913862624551570232342.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Callejera",
+            "description": "Hamburguesa de dos carnes de 125 g cada una 100% de res a la parrilla con salsa bbq, tocineta, queso mozzarella, papas callejera, salsa blanca, salsa bbq y mostaza en pan ajonjolí",
+            "price": "35.900",
+            "image": "https://images.rappi.com/products/tmp621743459010282178560810564.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Corralera",
+            "description": "Dos carnes de 125 gr a la parrilla con salsa bbq, tocineta especial, cebolla grillé, queso americano, salsa de tomate y salsa bbq en pan artesano",
+            "price": "35.900",
+            "image": "https://images.rappi.com/products/tmp731751514890653244753572538.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Tocineta",
+            "description": "Hamburguesa de dos carnes de 125 g cada una 100% de res a la parrilla con salsa bbq, tocineta, queso mozzarella, pepinillos, lechuga, tomate en rodajas, cebolla en rodajas y salsas",
+            "price": "35.900",
+            "image": "https://images.rappi.com/products/tmp621743274444788294820032016.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "hamburguesas",
+            "name": "Todoterreno Corralera Agrandad",
+            "description": "Hamburguesa de dos carnes de 125 g cada una 100% de rescebollitas crunchy, una tajada de queso tipo mozzarellapepinillos, tomate en rodajas y salsa todoterreno",
+            "price": "41.900",
+            "image": "https://images.rappi.com/products/tmp7317516616553871776243111029.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Chokolate Jet 473 Ml",
+            "description": "",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp731074778569099314285450715.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Luuulo 473ml",
+            "description": "",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp731074806297199057826841415.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Ya Ya Marakuya 473 Ml",
+            "description": "",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp731074757903243052372812748.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Café Moka Matiz 473ml",
+            "description": "",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp73107473329876874572611948.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Chokolate Jet 355 Ml",
+            "description": "",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp7310747614781260023546846559.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Luuulo 355 Ml",
+            "description": "",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp7310747916891334083535526725.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Ya Ya Marakuya 355ml",
+            "description": "",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp731074744384225402995744474.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "malteadas",
+            "name": "Malteada Café Moka Matiz 355ml",
+            "description": "",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp731074783520268936911270143.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Especial En Combo",
+            "description": "Perro caliente con salchicha a la parrilla, queso tipo mozzarella, tocineta, papa callejera, cebolla picada y salsas en pan perro + papas medianas (corral o en cascos) + bebida pet",
+            "price": "34.900",
+            "image": "https://images.rappi.com/products/tmp806542362128293981812850121.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Callejero En Combo",
+            "description": "Perro caliente con salchicha a la parrilla, papa callejera, cebolla picada, salsa blanca, salsa de tomate y mostaza en pan perro + papas medianas (corral o en cascos) + bebida pet.",
+            "price": "26.900",
+            "image": "https://images.rappi.com/products/tmp654241356679149977253896670.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Hawaiano En Combo",
+            "description": "Perro caliente con salchicha a la parrilla, queso tipo mozzarella, papa callejera, piña y salsas en pan perro + papas medianas (corral o en cascos) + bebida pet",
+            "price": "30.900",
+            "image": "https://images.rappi.com/products/tmp6542443317821339248024091095.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Corralero En Combo",
+            "description": "Salchicha a la parrilla con queso americano, trozos de cebolla grille, tocineta, salsa blanca y salsa bbq en pan perro + papas medianas (corral o en cascos) + bebida pet",
+            "price": "34.900",
+            "image": "https://images.rappi.com/products/tmp6542423010875963319900864014.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Piña Crunchy En Combo",
+            "description": "Salchicha a la parrilla con cebollitas crunchy, queso tipo mozzarella, tocineta, salsa blanca, salsa de tomate y salsa de piña en pan perro+papas medianas+bebida pet",
+            "price": "34.900",
+            "image": "https://images.rappi.com/products/tmp6542448610974078726580822333.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Callejero Con Bebida",
+            "description": "Perro caliente con salchicha a la parrilla, papa callejera, cebolla picada, salsa blanca, salsa de tomate y mostaza en pan perro + bebida pet",
+            "price": "21.900",
+            "image": "https://images.rappi.com/products/tmp6543707111696817212873977170.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Hawaiano Con Bebida",
+            "description": "Perro caliente con salchicha a la parrilla, queso tipo mozzarella, papa callejera, piña, salsa blanca y salsa de tomate en pan perro + bebida pet",
+            "price": "25.900",
+            "image": "https://images.rappi.com/products/tmp6543704311432578728201809638.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Corralero Con Bebida",
+            "description": "Salchicha a la parrilla con queso americano, trozos de cebolla grille, tocineta, salsa blanca y salsa bbq en pan perro + bebida pet",
+            "price": "29.900",
+            "image": "https://images.rappi.com/products/tmp6542435110283604994023359603.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Piña Crunchy Con Bebida",
+            "description": "Salchicha a la parrilla con cebollitas crunchy, queso tipo mozzarella, tocineta, salsa blanca, salsa de tomate y salsa de piña en pan perro + bebida pet",
+            "price": "29.900",
+            "image": "https://images.rappi.com/products/tmp654243929951200029137447857.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Especial Con Bebida",
+            "description": "Perro caliente con salchicha a la parrilla, queso tipo mozzarella, tocineta, papa callejera, cebolla picada, salsa blanca, salsa de tomate y mostaza en pan perro + bebida pet",
+            "price": "29.900",
+            "image": "https://images.rappi.com/products/tmp654371273544753789776025575.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Callejero",
+            "description": "Perro caliente con salchicha a la parrilla, papa callejera, cebolla picada, salsa blanca, salsa de tomate y mostaza en pan perro",
+            "price": "19.900",
+            "image": "https://images.rappi.com/products/tmp65424282845136012118470323.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Hawaino",
+            "description": "Perro caliente con salchicha a la parrilla, queso tipo mozzarella, papa callejera, piña, salsa blanca y salsa de tomate en pan perro",
+            "price": "23.900",
+            "image": "https://images.rappi.com/products/tmp6542437817349100388451346423.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Corralero",
+            "description": "Salchicha a la parrilla con queso americano, trozos de cebolla grille, tocineta, salsa blanca y salsa bbq en pan perro",
+            "price": "27.900",
+            "image": "https://images.rappi.com/products/tmp6542418918116311161382249249.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Piña Crunchy",
+            "description": "Salchicha a la parrilla con cebollitas crunchy, queso tipo mozzarella, tocineta, salsa blanca, salsa de tomate y salsa de piña en pan perro",
+            "price": "27.900",
+            "image": "https://images.rappi.com/products/tmp654241229044865173169954949.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "perros calientes",
+            "name": "Vaquero Especial",
+            "description": "Perro caliente con salchicha a la parrilla, queso tipo mozzarella, tocineta, papa callejera, cebolla picada, salsa blanca, salsa de tomate y mostaza en pan perro",
+            "price": "27.900",
+            "image": "https://images.rappi.com/products/tmp6542405017071807983001105983.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Chocolate 473 Ml",
+            "description": "Malteada de 473 ml sabor a chocolate. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp6215066310896564935587363969.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Macadamia 473 Ml",
+            "description": "Malteada de 473 ml sabor a macadamia. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp6215065610705864154304157713.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Frutos Del Bosque 473 Ml",
+            "description": "Malteada de 473 ml sabor a frutos del bosque. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp621506595698984018784708294.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Vainilla 473 Ml",
+            "description": "Malteada de 473 ml sabor a vainilla. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp621506603880820921426885929.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Fresa 473 Ml",
+            "description": "Malteada de 473 ml sabor a fresa. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp6215065518352824506493510038.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Cafe 473 Ml",
+            "description": "Malteada de 473 ml sabor a cafe. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "17.000",
+            "image": "https://images.rappi.com/products/tmp621506501457890100074160694.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Chocolate 355 Ml",
+            "description": "Malteada de 355 ml sabor a chocolate. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp621506646329919621577750102.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Macadamia 355 Ml",
+            "description": "Malteada de 355 ml sabor a macadamia. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp6215066512880163459237988185.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Frutos Del Bosque 355 Ml",
+            "description": "Malteada de 355 ml sabor frutos del bosque. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp6215065214069472868968627192.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Vainilla 355 Ml",
+            "description": "Malteada de 355 ml sabor a vainilla. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp6215065715389248205042902176.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Fresa 355 Ml",
+            "description": "Malteada de 355 ml sabor a fresa. la consistencia de este producto puede variar debido al tiempo de entrega.",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp6215065113839721478713372048.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Malteada De Cafe 355 Ml",
+            "description": "Malteada de 355 ml sabor a cafe. la consistencia de este producto puede variar debido al tiempo de entrega",
+            "price": "15.000",
+            "image": "https://images.rappi.com/products/tmp62150658469800303057245509.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Brownie De Arequipe Con Helado",
+            "description": "Brownie con cobertura de arequipe. acompañado de un vaso de helado 60 g",
+            "price": "13.900",
+            "image": "https://images.rappi.com/products/tmp583405542118922319262573369.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Brownie De Chocolate Con Helado",
+            "description": "Brownie con cobertura de chololate. acompañado de un vaso de helado 60 g",
+            "price": "13.900",
+            "image": "https://images.rappi.com/products/tmp5834055913964566553501637040.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Vaso De Helado De Chocolate 60 G",
+            "description": "Vaso de helado de 60 g del sabor que prefieras\n - chocolate",
+            "price": "6.500",
+            "image": "https://images.rappi.com/products/tmp5833731018013663007685187723.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Vaso De Helado De Macadamia 60 G",
+            "description": "Vaso de helado de 60 g del sabor que prefieras\n - macadamia",
+            "price": "6.500",
+            "image": "https://images.rappi.com/products/tmp5833731111982000403335684939.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Vaso De Helado De Frutos Rojos 60 G",
+            "description": "Vaso de helado de 60 g del sabor que prefiera - frutos rojos",
+            "price": "6.500",
+            "image": "https://images.rappi.com/products/tmp58337312736339613716216473.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Vaso De Helado De Vainilla 60 G",
+            "description": "Vaso de helado de 60 g del sabor que prefieras\n - vainilla",
+            "price": "6.500",
+            "image": "https://images.rappi.com/products/tmp5833731310215296930064536359.png?d=300x300&e=webp&q=10"
+        }
+    ],
+    "kfc": [
+        {
+            "type": "boxes",
+            "name": "Big Box Completo",
+            "description": "1 Presa de pollo + 3 alitas (las alitas picantes hot wings equivalen a un trozo de ala) + 1 pop corn peq. + 1 papa peq. + 1 ensalada col personal + 1 salsa bbq 2oz + 1 gaseosa pet 400ml",
+            "price": "28.500",
+            "image": "https://images.rappi.com/products/tmp7454849517218663493901972679.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "boxes",
+            "name": "Big Box Kentucky Coronel Sandwich",
+            "description": "1 Kentucky coronel sandwich (1 filete de pechuga de pollo apanado, ensalada coleslaw, bbq  y mantequilla) + 1 pop corn pequeño+ 1 papa pequeña + 1 gaseosa pet 400ml",
+            "price": "28.500",
+            "image": "https://images.rappi.com/products/tmp8128325414882006570383045936.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "boxes",
+            "name": "Big Box Pop Helado",
+            "description": "1 Popcorn peq(trocitos de pechuga apanados)+ 5 alitas(las alitas picantes hot wings equivalen a un trozo de ala)+ ensalada coleslaw per. + 1 papa peq+ gaseosa pet 400ml + salsa 2oz + sundae areq",
+            "price": "30.500",
+            "image": "https://images.rappi.com/products/tmp745485379829809781234430506.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "boxes",
+            "name": "Big Box Kentucky Sandwich Nuggets",
+            "description": "1 Kentucky sandwich (1 filete de pechuga de pollo apanado, pepinillos, mayonesa premium y mantequilla) + 5 nuggets + 1 papa pequeña + 1 gaseosa pet 400ml + 1 salsa miel mostaza + 1 sundae arequipe",
+            "price": "31.500",
+            "image": "https://images.rappi.com/products/tmp812832963609562939344300740.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Medio Kfc",
+            "description": "4 Presas de pollo + 2 papas pequeñas",
+            "price": "43.400",
+            "image": "https://images.rappi.com/products/tmp6747428417342793951777396448.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Mega Familiar Arepas",
+            "description": "8 Presas de pollo + 8 arepas",
+            "price": "49.900",
+            "image": "https://images.rappi.com/products/tmp46737941980577803974458045.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Mega Con Helado",
+            "description": "5 Presas de pollo + 3 papas pequeñas + 2 sundae arequipe",
+            "price": "52.900",
+            "image": "https://images.rappi.com/products/tmp686016718415023481447063516.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Trio Supremo",
+            "description": "4 Presas de pollo + 9 alitas picantes (las alitas picantes hot wings equivalen a un trozo de ala) + 1 popcorn mediano (trocitos de pechuga apanados) + 3 papas pequeñas",
+            "price": "81.050",
+            "image": "https://images.rappi.com/products/tmp812828195175667977937040344.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Mega Familiar",
+            "description": "8 Presas de pollo + 4 papas pequeñas",
+            "price": "86.800",
+            "image": "https://images.rappi.com/products/tmp6860171616117042887623183383.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Familiar Kfc Arepas",
+            "description": "8 Presas de pollo + 10 arepas + 1 ensalada coleslaw familiar",
+            "price": "62.900",
+            "image": "https://images.rappi.com/products/tmp719701458140417817940221439.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Bucket Tradicional",
+            "description": "8 Presas de pollo + 1 popcorn mediano (trocitos de pechuga apanados) + 2 papas pequeñas",
+            "price": "66.900",
+            "image": "https://images.rappi.com/products/tmp2415647911700008701996419956.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Mega Variedad Xl",
+            "description": "6 Presas de pollo + 6 alitas picantes + 6 nuggets + 1 popcorn mediano + 6 arepas + 2 papas pequeñas + 2 sundae de arequipe + 1 salsa bbq sweet + 1 salsa del coronel",
+            "price": "78.900",
+            "image": "https://images.rappi.com/products/tmp7530102717037127356955913101.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Mega Familiar Xl",
+            "description": "8 Presas de pollo + 4 papas pequeñas + 4 ensladas coleslaw + 1 gaseosa 1.5 litros",
+            "price": "108.500",
+            "image": "https://images.rappi.com/products/tmp7530105017447304596209529891.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "buckets",
+            "name": "Mega 3",
+            "description": "6 Presas de pollo + 2 pop corn mediano (trocitos de pechuga de pollo apanados) + 3 papas pequeñas + 1 gaseosa 1,5lts",
+            "price": "77.900",
+            "image": "https://images.rappi.com/products/tmp7454825411613002306819991237.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Combo Popcorn",
+            "description": "1 Pop corn mediano (trocitos de pechuga de pollo apanados) + 1 papa pequeña + 1 gaseosa pet 400ml",
+            "price": "19.900",
+            "image": "https://images.rappi.com/products/tmp7454827716603947402877021020.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Combo 2 Presas",
+            "description": "2 Presas de pollo + 1 papa pequeña + 1 gaseosa pet 400ml",
+            "price": "20.900",
+            "image": "https://images.rappi.com/products/tmp745482964977098339543557425.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Combo Casero",
+            "description": "2 Presas+ 1 papas pequeñas + 1 ensalada colslaw personal+ 1 gaseosa pet 400 ml",
+            "price": "29.100",
+            "image": "https://images.rappi.com/products/tmp745483379848094161061392726.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Combo 3 Presas",
+            "description": "3 Presas de pollo + 1 papa pequeña + 1 gaseosa pet 400ml",
+            "price": "24.900",
+            "image": "https://images.rappi.com/products/tmp745483589165983372844022323.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "combos",
+            "name": "Combo Alitas Picantes",
+            "description": "8 Hot wings (las alitas picantes hot wings equivalen a un trozo de ala) + 1 papa pequeña + 1 gaseosa pet 400ml",
+            "price": "24.900",
+            "image": "https://images.rappi.com/products/tmp745483798588931269626514957.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "nuggets",
+            "name": "Combo Nuggets",
+            "description": "10 Nuggets + 1 papa pequeña + 1 gaseosa pet 400ml + 1 salsa bbq + 1 salsa del coronel",
+            "price": "20.900",
+            "image": "https://images.rappi.com/products/tmp7530057817900677655919208131.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "nuggets",
+            "name": "Combo 5 Nuggets",
+            "description": "5 Nuggets + 1 papa pequeña + 1 gaseosa pet 400ml + 1 salsa de coronel",
+            "price": "15.900",
+            "image": "https://images.rappi.com/products/tmp7530059816838676411840123137.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "nuggets",
+            "name": "Parte Y Comparte Nuggets",
+            "description": "10 Nuggets + 10 alitas (las alitas picantes hot wings equivalen a un trozo de ala) + 2 papas pequeñas + 2 gaseosas pet + 1 salas bbq + 1 salsa del coronel",
+            "price": "42.900",
+            "image": "https://images.rappi.com/products/tmp7530061617406370061284715897.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "nuggets",
+            "name": "Adicion 5 Nuggets",
+            "description": "Ad 5 nuggets",
+            "price": "10.900",
+            "image": "https://images.rappi.com/products/tmp700045827331847915448204215.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "nuggets",
+            "name": "Adicion 10 Nuggets",
+            "description": "10 Nuggets",
+            "price": "15.900",
+            "image": "https://images.rappi.com/products/tmp7000459711550969286452102151.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Sundae Arequipe",
+            "description": "Helado de vainilla + arequipe",
+            "price": "5.900",
+            "image": "https://images.rappi.com/products/tmp241569734433577832957792180.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Sundae De Chocolate",
+            "description": "Helado de vainilla + chocolote",
+            "price": "5.900",
+            "image": "https://images.rappi.com/products/tmp464926661754909907829958229.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Avalancha Oreo",
+            "description": "Avalancha oreo (helado de vainilla + salsa de arequipe + topping de oreo)",
+            "price": "9.600",
+            "image": "https://images.rappi.com/products/tmp537208212201280657708732052.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "Avalancha Oreo Promo",
+            "description": "2 Avalanchas oreo  (helado de vainilla + salsa de arequipe + topping de oreo)",
+            "price": "19.200",
+            "image": "https://images.rappi.com/products/tmp53720832110336878835727632.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "postres",
+            "name": "3 Avalanchas Oreo",
+            "description": "3 Avalanchas oreo (helado de vainilla + salsa de arequipe + topping de oreo)",
+            "price": "28.800",
+            "image": "https://images.rappi.com/products/tmp537208435757073074398099139.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "sandwiches",
+            "name": "Kentucky Hamburguesa / Sandwich",
+            "description": "1 Kentucky sandwich (1 filete de pechuga de pollo apanado, pepinillos, mayonesa premium y mantequilla)",
+            "price": "17.400",
+            "image": "https://images.rappi.com/products/tmp5048761816143259946728249291.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "sandwiches",
+            "name": "Kentucky Coronel Sandwich",
+            "description": "1 Kentucky coronel hamburguesa / sandwich (1 filete de pechuga de pollo apanado, ensalada coleslaw, bbq  y mantequilla)",
+            "price": "18.400",
+            "image": "https://images.rappi.com/products/tmp659611218644798578698112507.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "sandwiches",
+            "name": "Combo Kentucky Coronel Sandwich",
+            "description": "1 Kentucky coronel sandwich (1 filete de pechuga de pollo apanado, ensalada coleslaw, bbq  y mantequilla) + 1 papa pequeña + 1 gaseosa pet 400ml",
+            "price": "24.400",
+            "image": "https://images.rappi.com/products/tmp745484343705530987729428206.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "sandwiches",
+            "name": "Sandwich Crispy Bbq",
+            "description": "Sandwich crispy bbq",
+            "price": "25.400",
+            "image": "https://images.rappi.com/products/tmp528967071990135888306194896.png?d=300x300&e=webp&q=10"
+        },
+        {
+            "type": "sandwiches",
+            "name": "Combo Sandwich Crispy Bbq",
+            "description": "1 Hamburguesa / sandwich crispy bbq + 1 papa pequeña + 1 gaseosa pet 400 ml",
+            "price": "31.900",
+            "image": "https://images.rappi.com/products/tmp7454847518215658168206113116.png?d=300x300&e=webp&q=10"
+        }
+    ]
 }
