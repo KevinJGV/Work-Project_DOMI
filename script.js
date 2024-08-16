@@ -35,14 +35,11 @@ export async function initializeData() {
     });
 }
 
-function Update_Cart() {
-    AQUI ME QUEDÉ
-}
 
 document.addEventListener("DOMContentLoaded", async () => {
     await initializeData();
 
-    const { close_menu, adjustPadding, initializeDynamicContent } = await import("./dinamic_adjusts.js");
+    const { close_menu, adjustPadding, initializeDynamicContent, Update_Cart } = await import("./dinamic_adjusts.js");
     const { apply_filters, get_filters_settings, initializeFilters } = await import("./filters_settings.js");
 
     await initializeFilters();
@@ -113,6 +110,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             SELECTED_ITEM["price"] = PARENT_ELEM.querySelector("span").textContent;
             SELECTED_ITEM["image"] = PARENT_ELEM.querySelector("img").src;
             localStorage.setItem(`to_cart_${UndersoreString(PARENT_ELEM.querySelector("h4").textContent)}`, JSON.stringify(SELECTED_ITEM));
+            Update_Cart();
         })
     })
 });

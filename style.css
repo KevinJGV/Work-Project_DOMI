@@ -20,6 +20,7 @@ body {
     position: absolute;
     overflow-y: auto;
     overflow-x: hidden;
+    background-image: radial-gradient(black,white);
 }
 
 a {
