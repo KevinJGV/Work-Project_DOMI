@@ -71,13 +71,13 @@ export function get_filters_settings() {
 }
 
 export async function set_filters_from_json() {
-    const { TYPES_OF_FOOD, Capitalize } = await import("./script.js");
+    const { TYPES_OF_FOOD, Capitalize, UndersoreString } = await import("./script.js");
 
     const FILTERS_BUTTONS = document.querySelectorAll(".filter");
     let counter = 0;
     FILTERS_BUTTONS.forEach((button) => {
         if (TYPES_OF_FOOD[counter].includes(" ")) {
-            button.value = TYPES_OF_FOOD[counter].split(" ").join("_"), "shop";
+            button.value = UndersoreString(TYPES_OF_FOOD[counter]), "shop";
         } else {
             button.value = TYPES_OF_FOOD[counter], "shop";
         }

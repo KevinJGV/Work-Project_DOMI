@@ -18,7 +18,7 @@ export function adjustPadding() {
 }
 
 export async function initializeDynamicContent() {
-    const { FOOD_JSON, TYPES_OF_FOOD, Capitalize } = await import(
+    const { FOOD_JSON, TYPES_OF_FOOD, Capitalize, UndersoreString } = await import(
         "./script.js"
     );
 
@@ -26,7 +26,7 @@ export async function initializeDynamicContent() {
     const RESULTS_SECTION = document.querySelector("#results_grid");
     TYPES_OF_FOOD.forEach((type_of_food) => {
         const SECTION = document.createElement("section");
-        const UNDERSCORED_TITLE = type_of_food.split(" ").join("_");
+        const UNDERSCORED_TITLE = UndersoreString(type_of_food);
         if (type_of_food.includes(" ")) {
             SECTION.classList.add(UNDERSCORED_TITLE, "shop");
         } else {
@@ -76,6 +76,7 @@ export async function initializeDynamicContent() {
                 PRICE.classList.add("item_price");
                 PRICE.textContent = `$ ${CURRENT_FOOD["price"]} c/u`;
                 const BUTTON = document.createElement("button");
+                BUTTON.classList.add("pick_item");
                 const STRONG = document.createElement("strong");
                 STRONG.textContent = "+";
                 BUTTON.insertAdjacentElement("beforeend", STRONG);
@@ -97,4 +98,8 @@ export async function initializeDynamicContent() {
         );
         MAIN_ELEMENT.insertAdjacentElement("beforeend", SECTION);
     });
+}
+
+function adding_to_shopping_cart() {
+
 }

@@ -6,6 +6,10 @@ export function Capitalize(string) {
     return string[0].toUpperCase() + string.slice(1);
 }
 
+export function UndersoreString(string) {
+    return string.split(" ").join("_");
+}
+
 export async function initializeData() {
     async function fetch_json(current_store) {
         return await fetch("./foods.json")
@@ -29,6 +33,10 @@ export async function initializeData() {
             TYPES_OF_FOOD.push(food["type"]);
         }
     });
+}
+
+function Update_Cart() {
+    AQUI ME QUEDÉ
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -90,4 +98,21 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
         RESULTS_SECTION.classList.add("no_display");
     });
+
+    document.querySelectorAll(".pick_item").forEach(button => {
+        button.addEventListener("click", () => {
+            const SELECTED_ITEM = {
+                "name": undefined,
+                "description": undefined,
+                "price": undefined,
+                "image": undefined
+            };
+            const PARENT_ELEM = button.parentElement.parentElement;
+            SELECTED_ITEM["name"] = PARENT_ELEM.querySelector("h4").textContent;
+            SELECTED_ITEM["description"] = PARENT_ELEM.querySelector("p").textContent;
+            SELECTED_ITEM["price"] = PARENT_ELEM.querySelector("span").textContent;
+            SELECTED_ITEM["image"] = PARENT_ELEM.querySelector("img").src;
+            localStorage.setItem(`to_cart_${UndersoreString(PARENT_ELEM.querySelector("h4").textContent)}`, JSON.stringify(SELECTED_ITEM));
+        })
+    })
 });
