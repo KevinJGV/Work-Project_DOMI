@@ -30,37 +30,44 @@ export function apply_filters(filter_input, options, results_section) {
             ) {
                 product.classList.remove("no_display");
                 coincidencia = true;
+            } else {
+                product.classList.add("no_display");
             }
         }
     });
     if (!coincidencia) {
-        GRID_PRODUCTS.style["grid-template-columns"] = "1fr";
+        GRID_PRODUCTS.style.setProperty('grid-template-columns', '1fr', 'important');
         GRID_PRODUCTS.childNodes.forEach((product) => {
             if (product.nodeName !== "#text" && product.nodeName !== "H3")
                 product.classList.add("no_display");
         });
         GRID_PRODUCTS.children[0].classList.remove("no_display");
     } else {
-        GRID_PRODUCTS.style["grid-template-columns"] = "repeat(3, 1fr)";
+        GRID_PRODUCTS.removeAttribute('style');
         GRID_PRODUCTS.children[0].classList.add("no_display");
     }
 }
 
-export function get_filters_settings(motive) {
+export function get_filters_settings() {
+    function evaluation(section) {
+        if (section.classList.contains("brand_label") || section.classList.contains("filter_label") || section.classList.contains("results")) {
+            return false
+        };
+        return true
+    };
     const FILTER_INPUT = document.querySelector("#filter_search");
     const FILTER_OPTIONS = document.querySelectorAll(
         ".filter_label_options input"
     );
-    const POPULAR_SECTION = document.querySelector(".popular");
-    const NEW_SECTION = document.querySelector(".new");
+    let sections = [];
+    const MAIN = document.querySelector("main").children;
+    for (const section of MAIN) {
+        if (evaluation(section)) {
+            sections.push(section)
+        }
+    };
     const RESULTS_SECTION = document.querySelector(".results");
-    return [
-        FILTER_INPUT,
-        FILTER_OPTIONS,
-        POPULAR_SECTION,
-        NEW_SECTION,
-        RESULTS_SECTION,
-    ];
+    return [FILTER_INPUT,FILTER_OPTIONS, RESULTS_SECTION,sections]
 }
 
 export async function set_filters_from_json() {
@@ -69,7 +76,11 @@ export async function set_filters_from_json() {
     const FILTERS_BUTTONS = document.querySelectorAll(".filter");
     let counter = 0;
     FILTERS_BUTTONS.forEach((button) => {
-        button.value = TYPES_OF_FOOD[counter];
+        if (TYPES_OF_FOOD[counter].includes(" ")) {
+            button.value = TYPES_OF_FOOD[counter].split(" ").join("_"), "shop";
+        } else {
+            button.value = TYPES_OF_FOOD[counter], "shop";
+        }
         button.nextElementSibling.textContent = Capitalize(
             TYPES_OF_FOOD[counter]
         );

@@ -55,22 +55,19 @@ document.addEventListener("DOMContentLoaded", async () => {
             header.style.top = "0";
         }
     });
-
     document.querySelector("#button_filter").addEventListener("click", () => {
         const [
             FILTER_INPUT,
             FILTER_OPTIONS,
-            POPULAR_SECTION,
-            NEW_SECTION,
             RESULTS_SECTION,
+            SECTIONS
         ] = get_filters_settings();
         let options = [];
         FILTER_OPTIONS.forEach((option) =>
             option.checked ? options.push(option) : null
         );
-        NEW_SECTION.classList.add("no_display");
-        POPULAR_SECTION.classList.add("no_display");
         RESULTS_SECTION.classList.remove("no_display");
+        SECTIONS.forEach(section => section.classList.add("no_display"));
         apply_filters(FILTER_INPUT, options, RESULTS_SECTION);
     });
 
@@ -78,14 +75,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const [
             FILTER_INPUT,
             FILTER_OPTIONS,
-            POPULAR_SECTION,
-            NEW_SECTION,
             RESULTS_SECTION,
+            SECTIONS
         ] = get_filters_settings();
         FILTER_INPUT.value = "";
         FILTER_OPTIONS.forEach((option) => (option.checked = false));
-        NEW_SECTION.classList.remove("no_display");
-        POPULAR_SECTION.classList.remove("no_display");
+        SECTIONS.forEach(section => section.classList.remove("no_display"));
         RESULTS_SECTION.querySelector(".grid_shop").childNodes.forEach(
             (product) => {
                 if (product.nodeName !== "#text" && product.nodeName !== "H3") {

@@ -483,7 +483,7 @@ button, label, .trending_item, .social_media img, .exit_aside {
     }
 
     .grid_shop {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr !important;
     }
     
     .shop h2 {
@@ -544,6 +544,7 @@ button, label, .trending_item, .social_media img, .exit_aside {
     .filter_label_options .grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        align-items: center;
     }
     
     .filter_label_options .grid * {
@@ -610,7 +611,11 @@ button, label, .trending_item, .social_media img, .exit_aside {
     }
 
     .grid_shop {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+    }
+
+    .filter_label_options .grid  {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
@@ -674,6 +679,6 @@ button, label, .trending_item, .social_media img, .exit_aside {
     }
 
     .grid_shop {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr !important;
     }
 }
