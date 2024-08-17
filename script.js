@@ -25,9 +25,10 @@ export async function initializeData() {
             .reverse()
             .pop();
     }
+    
     const CURRENT_PAGE = current_page();
 
-    if (CURRENT_PAGE !== "index") {
+    if (CURRENT_PAGE !== "index" || CURRENT_PAGE !== "") {
         FOOD_JSON = await fetch_json(CURRENT_PAGE);
 
         FOOD_JSON.forEach((food) => {
