@@ -25,10 +25,10 @@ export async function initializeData() {
             .reverse()
             .pop();
     }
-    
+
     const CURRENT_PAGE = current_page();
 
-    if (CURRENT_PAGE !== "index" || CURRENT_PAGE !== "") {
+    if (CURRENT_PAGE !== "index" && CURRENT_PAGE !== "") {
         FOOD_JSON = await fetch_json(CURRENT_PAGE);
 
         FOOD_JSON.forEach((food) => {
@@ -54,10 +54,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     localStorage.removeItem("content");
     localStorage.removeItem("description");
     localStorage.removeItem("title");
-    
-    let values;
+
+    const {
+        close_menu,
+        adjustPadding,
+        initializeDynamicContent,
+        Update_Cart,
+        Reset_Cart,
+        Update_checkout,
+    } = await import("./dinamic_adjusts.js");
+    const { apply_filters, get_filters_settings, initializeFilters } =
+        await import("./filters_settings.js");
 
     async function initialize_Values_Events() {
+        
         document.querySelectorAll(".value").forEach((value) => {
             value.addEventListener("input", (e) => {
                 const PARENT_ELEM =
@@ -118,42 +128,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    const CURRENT_PAGE = await initializeData();
+    document
+        .querySelectorAll(".exit_aside")
+        .forEach((button) => button.addEventListener("click", close_menu));
 
-    const {
-        close_menu,
-        adjustPadding,
-        initializeDynamicContent,
-        Update_Cart,
-        Reset_Cart,
-        Update_checkout,
-    } = await import("./dinamic_adjusts.js");
-    const { apply_filters, get_filters_settings, initializeFilters } =
-        await import("./filters_settings.js");
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const scrollTop = window.scrollY;
+        if (scrollTop > 0) {
+            header.style.top = "0";
+        } else {
+            header.style.top = "0";
+        }
+    });
+
+    adjustPadding();
+
+    const CURRENT_PAGE = await initializeData();
 
     Update_Cart(CART_BODY);
     Update_checkout();
     await initialize_Values_Events();
 
-    if (CURRENT_PAGE !== "index") {
+    if (CURRENT_PAGE !== "index" && CURRENT_PAGE !== "") {
         await initializeFilters();
         await initializeDynamicContent();
-
-        adjustPadding();
-
-        document
-            .querySelectorAll(".exit_aside")
-            .forEach((button) => button.addEventListener("click", close_menu));
-
-        window.addEventListener("scroll", function () {
-            const header = document.querySelector("header");
-            const scrollTop = window.scrollY;
-            if (scrollTop > 0) {
-                header.style.top = "0";
-            } else {
-                header.style.top = "0";
-            }
-        });
 
         document
             .querySelector("#button_filter")
