@@ -1,45 +1,52 @@
+
 # DOMI
 
-Este proyecto tiene como objetivo presentar de manera satisfactoria la página web ficticia "Domi", la cual es un proyecto sin funcionalidades relevantes implementadas, funcionando únicamente como una idea general de un proyecto real a desarrollar, inspirado en aplicaciones web de delivery de comida.
+Este proyecto presenta la página web "Domi", una aplicación web funcional inspirada en plataformas de delivery de comida. Ofrece una experiencia interactiva y dinámica para la selección y pedido de alimentos de diferentes restaurantes.
 
 ### Contenido del proyecto
 
 - [DOMI](#domi)
-    - [Contenido del proyecto](#contenido-del-proyecto)
+  - [Contenido del proyecto](#contenido-del-proyecto)
   - [Comenzando 🚀](#comenzando-)
+  - [Características principales 🍔](#características-principales-)
   - [Construido con 🛠️](#construido-con-️)
-  - [Autoria ✒️](#autoria-️)
+  - [Autoría ✒️](#autoría-️)
 
 ## Comenzando 🚀
 
-Domi es un Mobile-first Hi-Fi Wireframe directamente diseñado en HTML5/CSS diseñado para **dispositivos móviles** con dimensiones entre `301px` y `991px`, es decir, desde dispositivos móviles muy pequeños hasta tablets en orientación panorámica. En caso contrario, se mostrará un salvapantallas restringiendo el uso de la página.
+Domi es una aplicación web responsive diseñada para funcionar en una amplia gama de dispositivos, desde móviles hasta computadoras de escritorio. Para visualizar el proyecto:
 
-Para visualizar el resultado final de este proyecto, puedes descargar el repositorio e iniciarlo mediante `index.html` o acceder a él a través de `GitHub Pages` en el siguiente enlace:
+1. Descarga el repositorio e inicia `index.html`
+2. O accede a través de GitHub Pages: [https://kevinjgv.github.io/Work-Project_DOMI/](https://kevinjgv.github.io/Work-Project_DOMI/)
 
-[https://kevinjgv.github.io/Work-Project_DOMI/](https://kevinjgv.github.io/Work-Project_DOMI//)
+## Características principales 🍔
+
+- Catálogo dinámico de restaurantes y productos
+- Sistema de búsqueda y filtrado avanzado
+- Carrito de compras interactivo con persistencia de datos
+- Cálculo automático de subtotales y totales
+- Interfaz de usuario adaptable y responsiva
 
 ## Construido con 🛠️
 
-Domi está conformado únicamente por tecnologías web, centrándose en la estructura y presentación visual sin una interacción real del usuario. Las tecnologías **implementadas** son:
+El proyecto utiliza tecnologías web modernas para ofrecer una experiencia fluida y dinámica:
 
-* HTML
-* CSS
-* JS (mínimamente)
+* HTML5
+* CSS3
+* JavaScript (ES6+)
 
-El proyecto está compuesto por **4 páginas**:
+La estructura del proyecto incluye:
 
-* [Página de inicio / Índice (index.html)](index.html)
-* 3 páginas de compra:
-    * [McDonald's (mcdonalds.html)](mcdonalds.html)
-    * [El Corral (el_corral.html)](el_corral.html)
-    * [KFC (kfc.html)](kfc.html)
+* [Página de inicio (index.html)](index.html)
+* Páginas de compra para restaurantes específicos:
+  * [McDonald&#39;s (mcdonalds.html)](mcdonalds.html)
+  * [El Corral (el_corral.html)](el_corral.html)
+  * [KFC (kfc.html)](kfc.html)
+* Scripts JavaScript para la lógica de negocio y manipulación del DOM
+* Hojas de estilo CSS para el diseño responsivo
 
-Para visualizar el proyecto, puedes descargar el repositorio e iniciarlo mediante `index.html` o acceder a él a través de `GitHub Pages` en el siguiente enlace:
-
-[https://kevinjgv.github.io/PROYECTO-FILTRO_GONZALEZKEVIN/](https://kevinjgv.github.io/PROYECTO-FILTRO_GONZALEZKEVIN/)
-
-## Autoria ✒️
+## Autoría ✒️
 
 * [Kevin González - KevinJGV](https://github.com/KevinJGV)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/KevinJGV/Work-Project_DOMI/graphs/contributors) quíenes han participado en este proyecto.
+Puedes ver la lista completa de [contribuyentes](https://github.com/KevinJGV/Work-Project_DOMI/graphs/contributors) que han participado en este proyecto.
