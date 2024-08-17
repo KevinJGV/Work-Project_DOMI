@@ -50,6 +50,9 @@ const CART_BODY = document.querySelector(".body_aside");
 document.addEventListener("DOMContentLoaded", async () => {
     localStorage.removeItem("current_page");
     localStorage.removeItem("current-page");
+    localStorage.removeItem("content");
+    localStorage.removeItem("description");
+    localStorage.removeItem("title");
     
     let values;
 
