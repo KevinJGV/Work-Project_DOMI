@@ -1,252 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McDonald's Tangamandapio</title>
-    <link rel="icon" type="image" href="./media/Domi.svg">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <div class="advice flex unselected">
-        <img src="./media/Domi_unaviliable.svg" alt="">
-        <p class="max-screen">
-            <strong>Domi</strong> estara disponible proximamente para dispositivos de escritorio ;)
-        </p>
-        <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
-    </div>
-    <header>
-        <nav class="top_header flex j_sa">
-            <a href="./index.html" class="j_c unselected flex">
-                <img src="./media/Domi.svg" alt="logo" class="logo">
-            </a>
-            <input type="text" name="" id="search" placeholder="Busca comida en tu zona">
-            <input type="checkbox" id="toggle_cart">
-            <label for="toggle_cart" class="flex j_sa unselected">
-                <img src="./media/cart.svg" alt="" class="cart">
-            </label>
-            <aside class="cart_container flex_col j_sb_not-a">
-                <div class="flex j_sb">
-                    <h3>Carrito de compras</h3>
-                    <div onclick="close_menu()" class="exit_aside">
-                        <span>x</span>
-                    </div>
-                </div>
-                <div class="body_aside">
-                    <div class="cart_item">
-                        <div class="cart_item_data flex j_sb">
-                            <div class="cart_item_data_text">
-                                <h4>Mccombo Grande Mcpollo</h4>
-                                <p>Elige tú mccombo de hamburguesa con pattie de pollo, mayonesa y lechuga con papas grandes y gaseosa grande a elegir</p>
-                            </div>
-                            <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="" class="unselected">
-                        </div>
-                        <div class="cart_item_order flex j_sb">
-                            <span class="item_price">$40.000 c/u</span>
-                            <span class="item_quantity flex j_sa">
-                                <p>Cantidad:</p>
-                                <input type="text" class="value" value="3">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="cart_item">
-                        <div class="cart_item_data flex j_sb">
-                            <div class="cart_item_data_text">
-                                <h4>Mcflurry Oreo</h4>
-                                <p>Helado de vainilla con galleta oreo triturada y topping de chocolate.</p>
-                            </div>
-                            <img src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10" alt="" class="unselected">
-                        </div>
-                        <div class="cart_item_order flex j_sb">
-                            <span class="item_price">$10.900 c/u</span>
-                            <span class="item_quantity flex j_sa">
-                                <p>Cantidad:</p>
-                                <input type="text" class="value" value="1">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer_aside flex_col j_C">
-                    <div class="grid_paycheck grid">
-                        <span>Subtotal:</span>
-                        <span class="j_flex-end">$ 163.600</span>
-                        <span>Costos de envío:</span>
-                        <span class="j_flex-end">$ 4.800</span>
-                        <hr>
-                        <h3>Total:</h3>
-                        <h3 class="j_flex-end">$ 168.400</h3>
-                    </div>
-                    <button>Procesar pedido</button>
-                </div>
-            </aside>
-            <input type="checkbox" id="toggle_menu">
-            <label for="toggle_menu" class="flex j_sa">
-                <img src="./media/hamburguer.svg" alt="" class="hamburger_menu unselected">
-            </label>
-            <aside class="menu_container flex_col j_sb_not-a">
-                <div class="flex j_flex-end">
-                    <div onclick="close_menu()" class="exit_aside">
-                        <span>x</span>
-                    </div>
-                </div>
-                <div class="buttons_aside flex_col j_c">
-                    <button>Ingreso</button>
-                    <button>Registro</button>
-                </div>
-                <div class="options_aside">
-                    <h4><a href="">Ingresar tu restaurante</a></h4>
-                    <h4><a href="">Vuelvete un Domi</a></h4>
-                </div>
-                <div class="footer_aside flex_col j_c">
-                    <img src="./media/Domi.svg" alt="logo" class="menu_logo unselected">
-                </div>
-            </aside>
-        </nav>
-        <div class="bottom_header flex j_c">
-            <img src="./media/localitation.svg" alt="" class="unselected">
-            <span>Tangamandapio 🞃</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>McDonald's Tangamandapio</title>
+        <link rel="icon" type="image" href="./media/Domi.svg" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js" type="module"></script>
+    </head>
+    <body>
+        <div class="advice flex unselected">
+            <img src="./media/Domi_unaviliable.svg" alt="" />
+            <p class="max-screen">
+                <strong>Domi</strong> estara disponible proximamente para
+                dispositivos de escritorio ;)
+            </p>
+            <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
         </div>
-    </header>
-    <main>
-        <section class="brand_label flex_col j_c
-        ">
-            <img src="https://yt3.ggpht.com/a/AATXAJwY_D2ilCJvDMih-3AqBh8559s6sL0jJ7FS4g=s900-c-k-c0xffffffff-no-rj-mo" alt="mcdonalds" class="restaurant_logo">
-            <h2 class="flex">
-                McDonald's
-                <img src="./media/star.svg" alt="rate">
-                <strong>4.2</strong>
-            </h2>
-            <div class="signup_message flex j_c">
-                <h2><strong>Ingresa</strong></h2>
-                <h2> para pedir en </h2>
-                <h2><strong class="highlight">McDonald's</strong></h2>
+        <header>
+            <nav class="top_header flex j_sa">
+                <a href="./index.html" class="j_c unselected flex">
+                    <img src="./media/Domi.svg" alt="logo" class="logo" />
+                </a>
+                <input
+                    type="text"
+                    name=""
+                    id="search"
+                    placeholder="Busca comida en tu zona"
+                />
+                <input type="checkbox" id="toggle_cart" class="toggle_aside" />
+                <label for="toggle_cart" class="flex j_sa unselected">
+                    <img src="./media/cart.svg" alt="" class="cart" />
+                </label>
+                <aside class="cart_container flex_col j_sb_not-a">
+                    <div class="flex j_sb">
+                        <h3>Carrito de compras</h3>
+                        <div class="exit_aside">
+                            <span>x</span>
+                        </div>
+                    </div>
+                    <div class="body_aside">
+                        <h3 class="all_c unselected">
+                            Carrito vacío. Carrito triste :(
+                        </h3>
+                    </div>
+                    <div class="footer_aside flex_col hidden">
+                        <div class="grid_paycheck grid">
+                            <span>Subtotal:</span>
+                            <span id="subtotal" class="j_flex-end"></span>
+                            <span>Costos de envío:</span>
+                            <span class="j_flex-end">$ 6000</span>
+                            <hr />
+                            <h3>Total:</h3>
+                            <h3 id="total" class="j_flex-end"></h3>
+                        </div>
+                        <button>Procesar pedido</button>
+                    </div>
+                </aside>
+                <input type="checkbox" id="toggle_menu" class="toggle_aside" />
+                <label for="toggle_menu" class="flex j_sa">
+                    <img
+                        src="./media/hamburguer.svg"
+                        alt=""
+                        class="hamburger_menu unselected"
+                    />
+                </label>
+                <aside class="menu_container flex_col j_sb_not-a">
+                    <div class="flex j_flex-end">
+                        <div class="exit_aside">
+                            <span>x</span>
+                        </div>
+                    </div>
+                    <div class="buttons_aside flex_col j_c">
+                        <button>Ingreso</button>
+                        <button>Registro</button>
+                    </div>
+                    <div class="options_aside">
+                        <h4><a href="">Ingresar tu restaurante</a></h4>
+                        <h4><a href="">Vuelvete un Domi</a></h4>
+                    </div>
+                    <div class="footer_aside flex_col j_c">
+                        <img
+                            src="./media/Domi.svg"
+                            alt="logo"
+                            class="menu_logo unselected"
+                        />
+                    </div>
+                </aside>
+            </nav>
+            <div class="bottom_header flex j_c">
+                <img src="./media/localitation.svg" alt="" class="unselected" />
+                <span>Tangamandapio</span>
             </div>
-            <img src="./media/trail.svg" alt="" class="trail">
-        </section>
-        <section class="popular shop">
-            <h2>Populares</h2>
-            <div class="grid grid_shop">
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Mccombo Grande Pollo Mccrispy Legend 1 Pollo</h4>
-                            <p>Elige tu mccombo de hamburguesa con un pollo crispy de 125gr, salsa cbo, cebolla crispy,  tocineta, queso y lechuga con papas grandes y gaseosa grande a elegir.</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$38.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
+        </header>
+        <main>
+            <section class="brand_label flex_col j_c">
+                <img
+                    src="https://yt3.ggpht.com/a/AATXAJwY_D2ilCJvDMih-3AqBh8559s6sL0jJ7FS4g=s900-c-k-c0xffffffff-no-rj-mo"
+                    alt="mcdonalds"
+                    class="restaurant_logo"
+                />
+                <h2 class="flex">
+                    McDonald's
+                    <img src="./media/star.svg" alt="rate" />
+                    <strong>4.2</strong>
+                </h2>
+                <div class="signup_message flex j_c">
+                    <h2><strong>Ingresa</strong></h2>
+                    <h2>para pedir en</h2>
+                    <h2><strong class="highlight">McDonald's</strong></h2>
                 </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Mccombo Grande Cuarto De Libra</h4>
-                            <p>Elige tu mccombo™ de hamburguesa con carne de res de 125gr, cebolla, pepinillos, queso cheddar, salsa de tomate y mostaza con papas grandes y gaseosa grande a elegir</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp5730617616543561464005422247.png?d=300x300&e=webp&q=10" alt="">
+                <img src="./media/trail.svg" alt="" class="trail" />
+            </section>
+            <section class="filter_label flex card cart_item j_sb_not-a">
+                <article class="filter_label_bar flex_col j_se">
+                    <h3>Busca tu preferencia</h3>
+                    <input
+                        type="text"
+                        id="filter_search"
+                        name="filter_search"
+                        placeholder="La bacana, Fuzzy Smoothie, Hawaiana..."
+                    />
+                </article>
+                <h2 class="all_c">Ó</h2>
+                <article class="filter_label_options flex_col j_se_not-a">
+                    <h3 class="all_c">Selecciona tu preferencia</h3>
+                    <div class="grid">
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="filter_1"
+                            class="filter"
+                            value=""
+                        />
+                        <label for="filter_1"></label>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="filter_2"
+                            class="filter"
+                            value=""
+                        />
+                        <label for="filter_2"></label>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="filter_3"
+                            class="filter"
+                            value=""
+                        />
+                        <label for="filter_3"></label>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="filter_4"
+                            class="filter"
+                            value=""
+                        />
+                        <label for="filter_4"></label>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="filter_5"
+                            class="filter"
+                            value=""
+                        />
+                        <label for="filter_5"></label>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="filter_6"
+                            class="filter"
+                            value=""
+                        />
+                        <label for="filter_6"></label>
                     </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$36.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
+                </article>
+                <article class="filter_label_buttons flex_col j_se_not-a">
+                    <button id="button_clear" class="alternative_button">
+                        Limpiar
+                    </button>
+                    <button id="button_filter" class="alternative_button">
+                        Filtrar
+                    </button>
+                </article>
+            </section>
+            <section id="results" class="results shop no_display">
+                <h2>Resultados</h2>
+                <div id="results_grid" class="grid grid_shop">
+                    <h3 class="all_c alternative_button unselected">
+                        No se encontrarón coincidencias
+                    </h3>
                 </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Mccombo Grande Mcpollo</h4>
-                            <p>Elige tú mccombo de hamburguesa con pattie de pollo, mayonesa y lechuga con papas grandes y gaseosa grande a elegir</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$40.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Mcflurry Oreo + Papas Grandes</h4>
-                            <p>Lleva un mcflurry oreo y unas papas grandes.</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp420133567232464296258865193.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$19.500 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
+            </section>
+        </main>
+        <footer class="flex_col j_se">
+            <p>Copyright © 2024 Domi. Todos los derechos reservados.</p>
+            <div class="social_media unselected">
+                <img src="./media/ig_logo.svg" alt="" />
+                <img src="./media/x_logo.svg" alt="" />
             </div>
-        </section>
-        <section class="new shop">
-            <h2>Novedades</h2>
-            <div class="grid grid_shop">
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Mccombo Grande Doble Hamburguesa Con Queso</h4>
-                            <p>Lleva una hamburguesa con dos carnes de 50gr c/u, dos tajadas de queso cheddar, salsa de tomate, mostaza, cebolla picada y pepinillos, papas grandes y gaseosa grande (21oz) a elección.</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp5361280911252664021404063328.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$26.900 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Cajita Feliz Hamburguesa</h4>
-                            <p>Elige tu cajita feliz™ de hamburguesa de carne de 50gr, salsa de tomate, mostaza, cebolla triturada y pepinillos con papas kids, bebida del valle moraah, cascos de manzana y juguete.</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp7159878312406593198746937568.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$20.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Mccombo Fusión Colombia 2 Carnes Grande</h4>
-                            <p>Elige tu mccombo con hamburguesa doble carne de res de 125gr c/u, tocineta en tiras, platanitos, queso cheddar amarillo, cebolla crispy, deliciosa salsa sabor a chicharrón y cremosa salsa con aguacate con papas grandes y gaseosa grande a elegir.</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp715950676063379773384826425.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$50.000 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="cart_item card">
-                    <div class="cart_item_data flex j_sb">
-                        <div class="cart_item_data_text">
-                            <h4>Mcflurry Oreo</h4>
-                            <p>Helado de vainilla con galleta oreo triturada y topping de chocolate.</p>
-                        </div>
-                        <img src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10" alt="">
-                    </div>
-                    <div class="cart_item_order flex j_sb">
-                        <span class="item_price">$10.900 c/u</span>
-                        <button><strong>+</strong> Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="flex_col j_se">
-        <p>
-            Copyright © 2024 Domi. Todos los derechos reservados.
-        </p>
-        <div class="social_media unselected">
-            <img src="./media/ig_logo.svg" alt="">
-            <img src="./media/x_logo.svg" alt="">
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>

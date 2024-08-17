@@ -1,200 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domi: Pide Domis de comida</title>
-    <link rel="icon" type="image" href="./media/Domi.svg">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <div class="advice flex unselected">
-        <img src="./media/Domi_unaviliable.svg" alt="">
-        <p class="max-screen">
-            <strong>Domi</strong> estara disponible proximamente para dispositivos de escritorio ;)
-        </p>
-        <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
-    </div>
-    <header>
-        <nav class="top_header flex j_sa">
-            <a href="./index.html" class="j_c unselected flex">
-                <img src="./media/Domi.svg" alt="logo" class="logo">
-            </a>
-            <input type="text" name="" id="search" placeholder="Busca comida en tu zona">
-            <input type="checkbox" id="toggle_cart">
-            <label for="toggle_cart" class="flex j_sa unselected">
-                <img src="./media/cart.svg" alt="" class="cart">
-            </label>
-            <aside class="cart_container flex_col j_sb_not-a">
-                <div class="flex j_sb">
-                    <h3>Carrito de compras</h3>
-                    <div onclick="close_menu()" class="exit_aside">
-                        <span>x</span>
-                    </div>
-                </div>
-                <div class="body_aside">
-                    <div class="cart_item">
-                        <div class="cart_item_data flex j_sb">
-                            <div class="cart_item_data_text">
-                                <h4>Mccombo Grande Mcpollo</h4>
-                                <p>Elige tú mccombo de hamburguesa con pattie de pollo, mayonesa y lechuga con papas grandes y gaseosa grande a elegir</p>
-                            </div>
-                            <img src="https://images.rappi.com/products/tmp573071363509981529848563445.png?d=300x300&e=webp&q=10" alt="" class="unselected">
-                        </div>
-                        <div class="cart_item_order flex j_sb">
-                            <span class="item_price">$40.000 c/u</span>
-                            <span class="item_quantity flex j_sa">
-                                <p>Cantidad:</p>
-                                <input type="text" class="value" value="3">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="cart_item">
-                        <div class="cart_item_data flex j_sb">
-                            <div class="cart_item_data_text">
-                                <h4>Mcflurry Oreo</h4>
-                                <p>Helado de vainilla con galleta oreo triturada y topping de chocolate.</p>
-                            </div>
-                            <img src="https://images.rappi.com/products/tmp402330776682203832736776453.png?d=300x300&e=webp&q=10" alt="" class="unselected">
-                        </div>
-                        <div class="cart_item_order flex j_sb">
-                            <span class="item_price">$10.900 c/u</span>
-                            <span class="item_quantity flex j_sa">
-                                <p>Cantidad:</p>
-                                <input type="text" class="value" value="1">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer_aside flex_col j_C">
-                    <div class="grid_paycheck grid">
-                        <span>Subtotal:</span>
-                        <span class="j_flex-end">$ 163.600</span>
-                        <span>Costos de envío:</span>
-                        <span class="j_flex-end">$ 4.800</span>
-                        <hr>
-                        <h3>Total:</h3>
-                        <h3 class="j_flex-end">$ 168.400</h3>
-                    </div>
-                    <button>Procesar pedido</button>
-                </div>
-            </aside>
-            <input type="checkbox" id="toggle_menu">
-            <label for="toggle_menu" class="flex j_sa">
-                <img src="./media/hamburguer.svg" alt="" class="hamburger_menu unselected">
-            </label>
-            <aside class="menu_container flex_col j_sb_not-a">
-                <div class="flex j_flex-end">
-                    <div onclick="close_menu()" class="exit_aside">
-                        <span>x</span>
-                    </div>
-                </div>
-                <div class="buttons_aside flex_col j_c">
-                    <button>Ingreso</button>
-                    <button>Registro</button>
-                </div>
-                <div class="options_aside">
-                    <h4><a href="">Ingresar tu restaurante</a></h4>
-                    <h4><a href="">Vuelvete un Domi</a></h4>
-                </div>
-                <div class="footer_aside flex_col j_c">
-                    <img src="./media/Domi.svg" alt="logo" class="menu_logo unselected">
-                </div>
-            </aside>
-        </nav>
-        <div class="bottom_header flex j_c">
-            <img src="./media/localitation.svg" alt="" class="unselected">
-            <span>Tangamandapio 🞃</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Domi: Pide Domis de comida</title>
+        <link rel="icon" type="image" href="./media/Domi.svg" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js" type="module"></script>
+    </head>
+    <body>
+        <div class="advice flex unselected">
+            <img src="./media/Domi_unaviliable.svg" alt="" />
+            <p class="max-screen">
+                <strong>Domi</strong> estara disponible proximamente para
+                dispositivos de escritorio ;)
+            </p>
+            <p class="min-screen">Dimensiones <strong>NO</strong> soportadas</p>
         </div>
-    </header>
-    <main>
-        <section class="restaurants">
-            <h2 class="flex flex_col">
-                Top 3
-                <small>en tu zona</small>
-            </h2>
-            <img src="./media/trail.svg" alt="" class="trail unselected">
-            <div class="grid grid_restaurants">
-                <a href="./mcdonalds.html" class="card grid_item grid_item_1 j_c">
-                    <div class="flex_col j_se">
-                        <img src="https://yt3.ggpht.com/a/AATXAJwY_D2ilCJvDMih-3AqBh8559s6sL0jJ7FS4g=s900-c-k-c0xffffffff-no-rj-mo" alt="" class="restaurant_logo unselected">
-                        <h3>McDonald's</h3>
-                    </div>
+        <header>
+            <nav class="top_header flex j_sa">
+                <a href="./index.html" class="j_c unselected flex">
+                    <img src="./media/Domi.svg" alt="logo" class="logo" />
                 </a>
-                <a href="./el_corral.html" class="card grid_item grid_item_2 j_c">
-                    <div class="flex_col j_se">
-                        <img src="https://www.unicentrocucuta.com/wp-content/uploads/2021/09/Logo-El-Corral.png" alt="" class="restaurant_logo unselected">
-                        <h3>El Corral</h3>
+                <input
+                    type="text"
+                    name=""
+                    id="search"
+                    placeholder="Busca comida en tu zona"
+                />
+                <input type="checkbox" id="toggle_cart" class="toggle_aside" />
+                <label for="toggle_cart" class="flex j_sa unselected">
+                    <img src="./media/cart.svg" alt="" class="cart" />
+                </label>
+                <aside class="cart_container flex_col j_sb_not-a">
+                    <div class="flex j_sb">
+                        <h3>Carrito de compras</h3>
+                        <div class="exit_aside">
+                            <span>x</span>
+                        </div>
                     </div>
-                </a>
-                <a href="./kfc.html" class="card grid_item grid_item_3 j_c">
-                    <div class="flex_col j_se">
-                        <img src="https://c0.klipartz.com/pngpicture/227/108/gratis-png-logo-kfc-red-rebranding-diseno-grafico-kfc.png" alt="" class="restaurant_logo unselected">
-                        <h3>KFC</h3>
+                    <div class="body_aside">
+                        <h3 class="all_c unselected">
+                            Carrito vacío. Carrito triste :(
+                        </h3>
                     </div>
-                </a>
+                    <div class="footer_aside flex_col hidden">
+                        <div class="grid_paycheck grid">
+                            <span>Subtotal:</span>
+                            <span id="subtotal" class="j_flex-end"></span>
+                            <span>Costos de envío:</span>
+                            <span class="j_flex-end">$ 6000</span>
+                            <hr />
+                            <h3>Total:</h3>
+                            <h3 id="total" class="j_flex-end"></h3>
+                        </div>
+                        <button>Procesar pedido</button>
+                    </div>
+                </aside>
+                <input type="checkbox" id="toggle_menu" class="toggle_aside" />
+                <label for="toggle_menu" class="flex j_sa">
+                    <img
+                        src="./media/hamburguer.svg"
+                        alt=""
+                        class="hamburger_menu unselected"
+                    />
+                </label>
+                <aside class="menu_container flex_col j_sb_not-a">
+                    <div class="flex j_flex-end">
+                        <div class="exit_aside">
+                            <span>x</span>
+                        </div>
+                    </div>
+                    <div class="buttons_aside flex_col j_c">
+                        <button>Ingreso</button>
+                        <button>Registro</button>
+                    </div>
+                    <div class="options_aside">
+                        <h4><a href="">Ingresar tu restaurante</a></h4>
+                        <h4><a href="">Vuelvete un Domi</a></h4>
+                    </div>
+                    <div class="footer_aside flex_col j_c">
+                        <img
+                            src="./media/Domi.svg"
+                            alt="logo"
+                            class="menu_logo unselected"
+                        />
+                    </div>
+                </aside>
+            </nav>
+            <div class="bottom_header flex j_c">
+                <img src="./media/localitation.svg" alt="" class="unselected" />
+                <span>Tangamandapio</span>
             </div>
-        </section>
-        <section class="searched">
-            <h2 class="flex flex_col">
-                Top busquedas
-                <small>en tu zona</small>
-            </h2>
-            <img src="./media/trail.svg" alt="" class="trail unselected">
-            <div class="trending flex">
-                <div class="card trending_item">Hamburguesas</div>
-                <div class="card trending_item">Pizzas</div>
-                <div class="card trending_item">Sushi</div>
-                <div class="card trending_item">Tacos</div>
-                <div class="card trending_item">Pollo a la brasa</div>
-                <div class="card trending_item">Comida china</div>
-                <div class="card trending_item">Comida italiana</div>
-                <div class="card trending_item">Ensaladas</div>
-                <div class="card trending_item">Postres</div>
-                <div class="card trending_item">Bebidas</div>
-            </div>
-        </section>
-        <section class="info flex_col">
-            <h1><strong class="highlight">Domi</strong> para tí</h1>
-            <div class="download_box flex j_c">
-                <div class="card">💹 Domi es la mejor app</div>
-                <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=es_CO&pli=1" target="_blank">
-                    <button class="alternative_button">Descargar</button>
-                </a>
-            </div>
-            <div class="info_card_box flex_col">
-                <div class="card info_card">
-                    <div class="img_box unselected">
-                        <img src="./media/registro_negocio.webp" alt="empresa">
+        </header>
+        <main>
+            <section class="restaurants">
+                <h2 class="flex flex_col">
+                    Top 3
+                    <small>en tu zona</small>
+                </h2>
+                <img src="./media/trail.svg" alt="" class="trail unselected" />
+                <div class="grid grid_restaurants">
+                    <a
+                        href="./mcdonalds.html"
+                        class="card grid_item grid_item_1 j_c"
+                    >
+                        <div class="flex_col j_se">
+                            <img
+                                src="https://yt3.ggpht.com/a/AATXAJwY_D2ilCJvDMih-3AqBh8559s6sL0jJ7FS4g=s900-c-k-c0xffffffff-no-rj-mo"
+                                alt=""
+                                class="restaurant_logo unselected"
+                            />
+                            <h3>McDonald's</h3>
+                        </div>
+                    </a>
+                    <a
+                        href="./el_corral.html"
+                        class="card grid_item grid_item_2 j_c"
+                    >
+                        <div class="flex_col j_se">
+                            <img
+                                src="https://www.unicentrocucuta.com/wp-content/uploads/2021/09/Logo-El-Corral.png"
+                                alt=""
+                                class="restaurant_logo unselected"
+                            />
+                            <h3>El Corral</h3>
+                        </div>
+                    </a>
+                    <a href="./kfc.html" class="card grid_item grid_item_3 j_c">
+                        <div class="flex_col j_se">
+                            <img
+                                src="https://c0.klipartz.com/pngpicture/227/108/gratis-png-logo-kfc-red-rebranding-diseno-grafico-kfc.png"
+                                alt=""
+                                class="restaurant_logo unselected"
+                            />
+                            <h3>KFC</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="searched">
+                <h2 class="flex flex_col">
+                    Top busquedas
+                    <small>en tu zona</small>
+                </h2>
+                <img src="./media/trail.svg" alt="" class="trail unselected" />
+                <div class="trending flex">
+                    <div class="card trending_item">Hamburguesas</div>
+                    <div class="card trending_item">Pizzas</div>
+                    <div class="card trending_item">Sushi</div>
+                    <div class="card trending_item">Tacos</div>
+                    <div class="card trending_item">Pollo a la brasa</div>
+                    <div class="card trending_item">Comida china</div>
+                    <div class="card trending_item">Comida italiana</div>
+                    <div class="card trending_item">Ensaladas</div>
+                    <div class="card trending_item">Postres</div>
+                    <div class="card trending_item">Bebidas</div>
+                </div>
+            </section>
+            <section class="info flex_col">
+                <h1><strong class="highlight">Domi</strong> para tí</h1>
+                <div class="download_box flex j_c">
+                    <div class="card">💹 Domi es la mejor app</div>
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.tinder&hl=es_CO&pli=1"
+                        target="_blank"
+                    >
+                        <button class="alternative_button">Descargar</button>
+                    </a>
+                </div>
+                <div class="info_card_box flex_col">
+                    <div class="card info_card">
+                        <div class="img_box unselected">
+                            <img
+                                src="./media/registro_negocio.webp"
+                                alt="empresa"
+                            />
+                        </div>
+                        <div class="info_card_text flex_col j_sb">
+                            <h3>Ingresa tu restaurante</h3>
+                            <p>
+                                Unete a la multitudinaria alianza que conforma
+                                Domi y los beneficios de ser un aliado Domi.
+                            </p>
+                            <strong><a href="">Más información</a></strong>
+                        </div>
                     </div>
-                    <div class="info_card_text flex_col j_sb">
-                        <h3>Ingresa tu restaurante</h3>
-                        <p>Unete a la multitudinaria alianza que conforma Domi y los beneficios de ser un aliado Domi.</p>
-                        <strong><a href="">Más información</a></strong>
+                    <div class="card info_card flex_col j_c">
+                        <div class="img_box unselected">
+                            <img
+                                src="./media/Domi_repartidores.webp"
+                                alt="repartidores"
+                            />
+                        </div>
+                        <div class="info_card_text flex_col j_sb">
+                            <h3>Sé un Domi</h3>
+                            <p>
+                                Convierte tu medio de transporte en una fuente
+                                de ingresos faciles ayudando a Domi con su
+                                proposito.
+                            </p>
+                            <strong><a href="">Más información</a></strong>
+                        </div>
                     </div>
                 </div>
-                <div class="card info_card flex_col j_c">
-                    <div class="img_box unselected">
-                        <img src="./media/Domi_repartidores.webp" alt="repartidores">
-                    </div>
-                    <div class="info_card_text flex_col j_sb">
-                        <h3>Sé un Domi</h3>
-                        <p>Convierte tu medio de transporte en una fuente de ingresos faciles ayudando a Domi con su proposito.</p>
-                        <strong><a href="">Más información</a></strong>
-                    </div>
-                </div>
+            </section>
+        </main>
+        <footer class="flex_col j_se">
+            <p>Copyright © 2024 Domi. Todos los derechos reservados.</p>
+            <div class="social_media unselected">
+                <img src="./media/ig_logo.svg" alt="" />
+                <img src="./media/x_logo.svg" alt="" />
             </div>
-        </section>
-    </main>
-    <footer class="flex_col j_se">
-        <p>
-            Copyright © 2024 Domi. Todos los derechos reservados.
-        </p>
-        <div class="social_media unselected">
-            <img src="./media/ig_logo.svg" alt="">
-            <img src="./media/x_logo.svg" alt="">
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>

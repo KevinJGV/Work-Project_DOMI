@@ -26,13 +26,17 @@ export async function initializeData() {
             .pop();
     }
     const CURRENT_PAGE = current_page();
-    FOOD_JSON = await fetch_json(CURRENT_PAGE);
 
-    FOOD_JSON.forEach((food) => {
-        if (!TYPES_OF_FOOD.includes(food["type"])) {
-            TYPES_OF_FOOD.push(food["type"]);
-        }
-    });
+    if (CURRENT_PAGE !== "index") {
+        FOOD_JSON = await fetch_json(CURRENT_PAGE);
+
+        FOOD_JSON.forEach((food) => {
+            if (!TYPES_OF_FOOD.includes(food["type"])) {
+                TYPES_OF_FOOD.push(food["type"]);
+            }
+        });
+    }
+    return CURRENT_PAGE;
 }
 
 async function Update_Quantity_localStorage(new_value, key) {
@@ -107,15 +111,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    await initializeData();
+    const CURRENT_PAGE = await initializeData();
 
     const {
         close_menu,
         adjustPadding,
         initializeDynamicContent,
         Update_Cart,
-        Reset_Cart, 
-        Update_checkout
+        Reset_Cart,
+        Update_checkout,
     } = await import("./dinamic_adjusts.js");
     const { apply_filters, get_filters_settings, initializeFilters } =
         await import("./filters_settings.js");
@@ -124,78 +128,100 @@ document.addEventListener("DOMContentLoaded", async () => {
     Update_checkout();
     await initialize_Values_Events();
 
-    await initializeFilters();
-    await initializeDynamicContent();
+    if (CURRENT_PAGE !== "index") {
+        await initializeFilters();
+        await initializeDynamicContent();
 
-    adjustPadding();
+        adjustPadding();
 
-    document
-        .querySelectorAll(".exit_aside")
-        .forEach((button) => button.addEventListener("click", close_menu));
+        document
+            .querySelectorAll(".exit_aside")
+            .forEach((button) => button.addEventListener("click", close_menu));
 
-    window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        const scrollTop = window.scrollY;
-        if (scrollTop > 0) {
-            header.style.top = "0";
-        } else {
-            header.style.top = "0";
-        }
-    });
-
-    document.querySelector("#button_filter").addEventListener("click", () => {
-        const [FILTER_INPUT, FILTER_OPTIONS, RESULTS_SECTION, SECTIONS] =
-            get_filters_settings();
-        let options = [];
-        FILTER_OPTIONS.forEach((option) =>
-            option.checked ? options.push(option) : null
-        );
-        RESULTS_SECTION.classList.remove("no_display");
-        SECTIONS.forEach((section) => section.classList.add("no_display"));
-        apply_filters(FILTER_INPUT, options, RESULTS_SECTION);
-    });
-
-    document.querySelector("#button_clear").addEventListener("click", () => {
-        const [FILTER_INPUT, FILTER_OPTIONS, RESULTS_SECTION, SECTIONS] =
-            get_filters_settings();
-        FILTER_INPUT.value = "";
-        FILTER_OPTIONS.forEach((option) => (option.checked = false));
-        SECTIONS.forEach((section) => section.classList.remove("no_display"));
-        RESULTS_SECTION.querySelector(".grid_shop").childNodes.forEach(
-            (product) => {
-                if (product.nodeName !== "#text" && product.nodeName !== "H3") {
-                    product.classList.add("no_display");
-                }
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            const scrollTop = window.scrollY;
+            if (scrollTop > 0) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "0";
             }
-        );
-        RESULTS_SECTION.classList.add("no_display");
-    });
-
-    document.querySelectorAll(".pick_item").forEach((button) => {
-        button.addEventListener("click", () => {
-            const SELECTED_ITEM = {
-                name: undefined,
-                description: undefined,
-                price: undefined,
-                image: undefined,
-                quantity: "1",
-            };
-            const PARENT_ELEM = button.parentElement.parentElement;
-            SELECTED_ITEM["name"] = PARENT_ELEM.querySelector("h4").textContent;
-            SELECTED_ITEM["description"] =
-                PARENT_ELEM.querySelector("p").textContent;
-            SELECTED_ITEM["price"] =
-                PARENT_ELEM.querySelector("span").textContent;
-            SELECTED_ITEM["image"] = PARENT_ELEM.querySelector("img").src;
-            localStorage.setItem(
-                `to_cart_${UndersoreString(
-                    PARENT_ELEM.querySelector("h4").textContent
-                )}`,
-                JSON.stringify(SELECTED_ITEM)
-            );
-            Update_Cart(CART_BODY);
-            Update_checkout();
-            initialize_Values_Events();
         });
-    });
+
+        document
+            .querySelector("#button_filter")
+            .addEventListener("click", () => {
+                const [
+                    FILTER_INPUT,
+                    FILTER_OPTIONS,
+                    RESULTS_SECTION,
+                    SECTIONS,
+                ] = get_filters_settings();
+                let options = [];
+                FILTER_OPTIONS.forEach((option) =>
+                    option.checked ? options.push(option) : null
+                );
+                RESULTS_SECTION.classList.remove("no_display");
+                SECTIONS.forEach((section) =>
+                    section.classList.add("no_display")
+                );
+                apply_filters(FILTER_INPUT, options, RESULTS_SECTION);
+            });
+
+        document
+            .querySelector("#button_clear")
+            .addEventListener("click", () => {
+                const [
+                    FILTER_INPUT,
+                    FILTER_OPTIONS,
+                    RESULTS_SECTION,
+                    SECTIONS,
+                ] = get_filters_settings();
+                FILTER_INPUT.value = "";
+                FILTER_OPTIONS.forEach((option) => (option.checked = false));
+                SECTIONS.forEach((section) =>
+                    section.classList.remove("no_display")
+                );
+                RESULTS_SECTION.querySelector(".grid_shop").childNodes.forEach(
+                    (product) => {
+                        if (
+                            product.nodeName !== "#text" &&
+                            product.nodeName !== "H3"
+                        ) {
+                            product.classList.add("no_display");
+                        }
+                    }
+                );
+                RESULTS_SECTION.classList.add("no_display");
+            });
+
+        document.querySelectorAll(".pick_item").forEach((button) => {
+            button.addEventListener("click", () => {
+                const SELECTED_ITEM = {
+                    name: undefined,
+                    description: undefined,
+                    price: undefined,
+                    image: undefined,
+                    quantity: "1",
+                };
+                const PARENT_ELEM = button.parentElement.parentElement;
+                SELECTED_ITEM["name"] =
+                    PARENT_ELEM.querySelector("h4").textContent;
+                SELECTED_ITEM["description"] =
+                    PARENT_ELEM.querySelector("p").textContent;
+                SELECTED_ITEM["price"] =
+                    PARENT_ELEM.querySelector("span").textContent;
+                SELECTED_ITEM["image"] = PARENT_ELEM.querySelector("img").src;
+                localStorage.setItem(
+                    `to_cart_${UndersoreString(
+                        PARENT_ELEM.querySelector("h4").textContent
+                    )}`,
+                    JSON.stringify(SELECTED_ITEM)
+                );
+                Update_Cart(CART_BODY);
+                Update_checkout();
+                initialize_Values_Events();
+            });
+        });
+    }
 });
