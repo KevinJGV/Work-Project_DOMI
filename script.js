@@ -12,7 +12,7 @@ export function UndersoreString(string) {
 
 export async function initializeData() {
     async function fetch_json(current_store) {
-        return await fetch("./foods.json")
+        return await fetch("/foods.json")
             .then((res) => res.json())
             .then((res) => res[current_store]);
     }
