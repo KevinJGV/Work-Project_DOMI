@@ -48,6 +48,9 @@ async function Update_Quantity_localStorage(new_value, key) {
 const CART_BODY = document.querySelector(".body_aside");
 
 document.addEventListener("DOMContentLoaded", async () => {
+    localStorage.removeItem("current_page");
+    localStorage.removeItem("current-page");
+    
     let values;
 
     async function initialize_Values_Events() {
