@@ -35,24 +35,94 @@ export async function initializeData() {
     });
 }
 
-function Update_Values() {
-    document.querySelectorAll(".values").forEach(value => {
-        value.addEventListener("input", () => {
-            console.log(value);
-        })
-    });
-    
+async function Update_Quantity_localStorage(new_value, key) {
+    const OBJECT_TO_EDIT = JSON.parse(localStorage.getItem(key));
+    OBJECT_TO_EDIT["quantity"] = new_value;
+    localStorage.setItem(key, JSON.stringify(OBJECT_TO_EDIT));
 }
 
+const CART_BODY = document.querySelector(".body_aside");
 
 document.addEventListener("DOMContentLoaded", async () => {
-    
     let values;
+
+    async function initialize_Values_Events() {
+        document.querySelectorAll(".value").forEach((value) => {
+            value.addEventListener("input", (e) => {
+                const PARENT_ELEM =
+                    value.parentElement.parentElement.parentElement;
+                const localStorage_KEY_CURRENT_ELEMENT = `to_cart_${UndersoreString(
+                    PARENT_ELEM.querySelector("h4").textContent
+                )}`;
+                const NO_NUMBERS_PATTERN = new RegExp(/^[^0-9]+$/, "gmi");
+                const DETECT_NUMBERS_PATTERN = new RegExp(/[0-9]/, "gm");
+                if (NO_NUMBERS_PATTERN.test(value.value)) {
+                    value.value = "";
+                } else {
+                    if (value.value.length > 0) {
+                        value.value = Number(
+                            value.value.match(DETECT_NUMBERS_PATTERN).join("")
+                        );
+                        Update_Quantity_localStorage(
+                            value.value,
+                            localStorage_KEY_CURRENT_ELEMENT
+                        );
+                        Update_checkout();
+                    }
+                }
+            });
+
+            value.addEventListener("blur", (e) => {
+                const PARENT_ELEM =
+                    value.parentElement.parentElement.parentElement;
+                const localStorage_KEY_CURRENT_ELEMENT = `to_cart_${UndersoreString(
+                    PARENT_ELEM.querySelector("h4").textContent
+                )}`;
+                if (value.value === "") {
+                    value.value = "1";
+                    Update_Quantity_localStorage(
+                        "1",
+                        localStorage_KEY_CURRENT_ELEMENT
+                    );
+                    Update_checkout();
+                } else if (value.value === "0") {
+                    localStorage.removeItem(
+                        `to_cart_${UndersoreString(
+                            PARENT_ELEM.querySelector("h4").textContent
+                        )}`
+                    );
+                    PARENT_ELEM.remove();
+                    if (CART_BODY.textContent === "") {
+                        Reset_Cart(CART_BODY);
+                    }
+                }
+            });
+
+            value.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    value.blur();
+                }
+            });
+        });
+    }
 
     await initializeData();
 
-    const { close_menu, adjustPadding, initializeDynamicContent, Update_Cart } = await import("./dinamic_adjusts.js");
-    const { apply_filters, get_filters_settings, initializeFilters } = await import("./filters_settings.js");
+    const {
+        close_menu,
+        adjustPadding,
+        initializeDynamicContent,
+        Update_Cart,
+        Reset_Cart, 
+        Update_checkout
+    } = await import("./dinamic_adjusts.js");
+    const { apply_filters, get_filters_settings, initializeFilters } =
+        await import("./filters_settings.js");
+
+    Update_Cart(CART_BODY);
+    Update_checkout();
+    await initialize_Values_Events();
 
     await initializeFilters();
     await initializeDynamicContent();
@@ -72,32 +142,25 @@ document.addEventListener("DOMContentLoaded", async () => {
             header.style.top = "0";
         }
     });
+
     document.querySelector("#button_filter").addEventListener("click", () => {
-        const [
-            FILTER_INPUT,
-            FILTER_OPTIONS,
-            RESULTS_SECTION,
-            SECTIONS
-        ] = get_filters_settings();
+        const [FILTER_INPUT, FILTER_OPTIONS, RESULTS_SECTION, SECTIONS] =
+            get_filters_settings();
         let options = [];
         FILTER_OPTIONS.forEach((option) =>
             option.checked ? options.push(option) : null
         );
         RESULTS_SECTION.classList.remove("no_display");
-        SECTIONS.forEach(section => section.classList.add("no_display"));
+        SECTIONS.forEach((section) => section.classList.add("no_display"));
         apply_filters(FILTER_INPUT, options, RESULTS_SECTION);
     });
 
     document.querySelector("#button_clear").addEventListener("click", () => {
-        const [
-            FILTER_INPUT,
-            FILTER_OPTIONS,
-            RESULTS_SECTION,
-            SECTIONS
-        ] = get_filters_settings();
+        const [FILTER_INPUT, FILTER_OPTIONS, RESULTS_SECTION, SECTIONS] =
+            get_filters_settings();
         FILTER_INPUT.value = "";
         FILTER_OPTIONS.forEach((option) => (option.checked = false));
-        SECTIONS.forEach(section => section.classList.remove("no_display"));
+        SECTIONS.forEach((section) => section.classList.remove("no_display"));
         RESULTS_SECTION.querySelector(".grid_shop").childNodes.forEach(
             (product) => {
                 if (product.nodeName !== "#text" && product.nodeName !== "H3") {
@@ -108,23 +171,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         RESULTS_SECTION.classList.add("no_display");
     });
 
-    document.querySelectorAll(".pick_item").forEach(button => {
+    document.querySelectorAll(".pick_item").forEach((button) => {
         button.addEventListener("click", () => {
             const SELECTED_ITEM = {
-                "name": undefined,
-                "description": undefined,
-                "price": undefined,
-                "image": undefined
+                name: undefined,
+                description: undefined,
+                price: undefined,
+                image: undefined,
+                quantity: "1",
             };
             const PARENT_ELEM = button.parentElement.parentElement;
             SELECTED_ITEM["name"] = PARENT_ELEM.querySelector("h4").textContent;
-            SELECTED_ITEM["description"] = PARENT_ELEM.querySelector("p").textContent;
-            SELECTED_ITEM["price"] = PARENT_ELEM.querySelector("span").textContent;
+            SELECTED_ITEM["description"] =
+                PARENT_ELEM.querySelector("p").textContent;
+            SELECTED_ITEM["price"] =
+                PARENT_ELEM.querySelector("span").textContent;
             SELECTED_ITEM["image"] = PARENT_ELEM.querySelector("img").src;
-            localStorage.setItem(`to_cart_${UndersoreString(PARENT_ELEM.querySelector("h4").textContent)}`, JSON.stringify(SELECTED_ITEM));
-            Update_Cart();
-            NO FUNCIONA OBTENER LOS .VALUES
-            Update_Values();
-        })
+            localStorage.setItem(
+                `to_cart_${UndersoreString(
+                    PARENT_ELEM.querySelector("h4").textContent
+                )}`,
+                JSON.stringify(SELECTED_ITEM)
+            );
+            Update_Cart(CART_BODY);
+            Update_checkout();
+            initialize_Values_Events();
+        });
     });
 });

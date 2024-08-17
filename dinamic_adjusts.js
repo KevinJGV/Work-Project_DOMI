@@ -37,7 +37,12 @@ export async function initializeDynamicContent() {
         GRID.classList.add("grid", "grid_shop");
         for (const CURRENT_FOOD of FOOD_JSON) {
             if (CURRENT_FOOD["type"] === type_of_food) {
-                const CARD_FOOD = create_card("section", type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD);
+                const CARD_FOOD = create_card(
+                    "section",
+                    type_of_food,
+                    UNDERSCORED_TITLE,
+                    CURRENT_FOOD
+                );
                 [GRID, RESULTS_SECTION].forEach((parent_elem) => {
                     const card_clone = CARD_FOOD.cloneNode(true);
                     parent_elem.insertAdjacentElement("beforeend", card_clone);
@@ -59,10 +64,10 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
             CARD_FOOD.classList.add(UNDERSCORED_TITLE, "cart_item", "card");
         } else {
             CARD_FOOD.classList.add(type_of_food, "cart_item", "card");
-        };
+        }
     } else {
         CARD_FOOD.classList.add("cart_item");
-    };
+    }
     CARD_FOOD.classList.add("cart_item", "card");
     const CARD_FOOD_DATA = document.createElement("div");
     CARD_FOOD_DATA.classList.add("cart_item_data", "flex", "j_sb");
@@ -73,13 +78,13 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
         H4.textContent = CURRENT_FOOD["name"];
     } else {
         H4.textContent = motive["name"];
-    };
+    }
     const P = document.createElement("p");
     if (motive === "section") {
         P.textContent = CURRENT_FOOD["description"];
     } else {
         P.textContent = motive["description"];
-    };
+    }
     [H4, P].forEach((elem) =>
         CARD_FOOD_DATA_TEXT.insertAdjacentElement("beforeend", elem)
     );
@@ -88,7 +93,7 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
         IMG.src = CURRENT_FOOD["image"];
     } else {
         IMG.src = motive["image"];
-    };
+    }
     [CARD_FOOD_DATA_TEXT, IMG].forEach((elem) =>
         CARD_FOOD_DATA.insertAdjacentElement("beforeend", elem)
     );
@@ -100,7 +105,7 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
         PRICE.textContent = `$ ${CURRENT_FOOD["price"]} c/u`;
     } else {
         PRICE.textContent = motive["price"];
-    };
+    }
     let button_or_input;
     if (motive === "section") {
         button_or_input = document.createElement("button");
@@ -117,26 +122,60 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
         const INPUT = document.createElement("input");
         INPUT.type = "text";
         INPUT.classList.add("value");
-        INPUT.value = "1";
-        [SPAN_P,INPUT].forEach(elem => button_or_input.insertAdjacentElement("beforeend",elem));
-    };
+        INPUT.value = motive["quantity"];
+        INPUT.maxLength = "1";
+        [SPAN_P, INPUT].forEach((elem) =>
+            button_or_input.insertAdjacentElement("beforeend", elem)
+        );
+    }
     [PRICE, button_or_input].forEach((elem) =>
         CARD_FOOD_FOOTER.insertAdjacentElement("beforeend", elem)
     );
     [CARD_FOOD_DATA, CARD_FOOD_FOOTER].forEach((elem) =>
         CARD_FOOD.insertAdjacentElement("beforeend", elem)
     );
-    return CARD_FOOD
+    return CARD_FOOD;
 }
 
-export function Update_Cart() {
-    // debugger
-    const CART_BODY = document.querySelector(".body_aside");
-    CART_BODY.textContent = "";
-    for (let i = 0; i < localStorage.length; i++) {
-        const STORAGED_ITEM = JSON.parse(localStorage[localStorage.key(i)]);
-        const CARD_CART = create_card(STORAGED_ITEM);
-        CART_BODY.insertAdjacentElement("beforeend", CARD_CART);
-    };
-    CART_BODY.nextElementSibling.classList.remove("hidden");
+export function Update_Cart(CART_BODY) {
+    if (localStorage.length > 0) {
+        CART_BODY.textContent = "";
+        for (let i = 0; i < localStorage.length; i++) {
+            const STORAGED_ITEM = JSON.parse(localStorage[localStorage.key(i)]);
+            const CARD_CART = create_card(STORAGED_ITEM);
+            CART_BODY.insertAdjacentElement("beforeend", CARD_CART);
+        }
+        CART_BODY.nextElementSibling.classList.remove("hidden");
+    }
+}
+
+export function Reset_Cart(CART_BODY) {
+    localStorage.clear();
+    const H3 = document.createElement("h3");
+    H3.classList.add("all_c", "unselected");
+    H3.textContent = "Carrito vacío. Carrito triste :(";
+    CART_BODY.insertAdjacentElement("beforeend", H3);
+    CART_BODY.nextElementSibling.classList.add("hidden");
+}
+
+export function Update_checkout() {
+    if (localStorage.length > 0) {
+        const SUBTOTAL = document.querySelector("#subtotal");
+        SUBTOTAL.textContent = "";
+        const TOTAL = document.querySelector("#total");
+        TOTAL.textContent = "";
+        const DETECT_NUMBERS_PATTERN = new RegExp(/[0-9]/, "gm");
+        let contador = 0;
+        for (let i = 0; i < localStorage.length; i++) {
+            const STORAGED_ITEM = JSON.parse(localStorage[localStorage.key(i)]);
+            contador +=
+                Number(
+                    STORAGED_ITEM["price"]
+                        .match(DETECT_NUMBERS_PATTERN)
+                        .join("")
+                ) * Number(STORAGED_ITEM["quantity"]);
+        }
+        SUBTOTAL.insertAdjacentText("beforeend", `$ ${contador}`);
+        TOTAL.insertAdjacentText("beforeend", `$ ${contador + 6000}`);
+    }
 }
