@@ -130,12 +130,13 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
 }
 
 export function Update_Cart() {
+    // debugger
     const CART_BODY = document.querySelector(".body_aside");
+    CART_BODY.textContent = "";
     for (let i = 0; i < localStorage.length; i++) {
         const STORAGED_ITEM = JSON.parse(localStorage[localStorage.key(i)]);
         const CARD_CART = create_card(STORAGED_ITEM);
         CART_BODY.insertAdjacentElement("beforeend", CARD_CART);
     };
-    CART_BODY.firstElementChild.classList.add("no_display");
-    console.log(CART_BODY);
+    CART_BODY.nextElementSibling.classList.remove("hidden");
 }

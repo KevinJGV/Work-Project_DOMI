@@ -35,8 +35,20 @@ export async function initializeData() {
     });
 }
 
+function Update_Values() {
+    document.querySelectorAll(".values").forEach(value => {
+        value.addEventListener("input", () => {
+            console.log(value);
+        })
+    });
+    
+}
+
 
 document.addEventListener("DOMContentLoaded", async () => {
+    
+    let values;
+
     await initializeData();
 
     const { close_menu, adjustPadding, initializeDynamicContent, Update_Cart } = await import("./dinamic_adjusts.js");
@@ -111,6 +123,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             SELECTED_ITEM["image"] = PARENT_ELEM.querySelector("img").src;
             localStorage.setItem(`to_cart_${UndersoreString(PARENT_ELEM.querySelector("h4").textContent)}`, JSON.stringify(SELECTED_ITEM));
             Update_Cart();
+            NO FUNCIONA OBTENER LOS .VALUES
+            Update_Values();
         })
-    })
+    });
 });
