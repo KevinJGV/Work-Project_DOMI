@@ -18,11 +18,24 @@ export function adjustPadding() {
 }
 
 export async function initializeDynamicContent() {
+    console.log("🔧 Starting initializeDynamicContent");
+    
     const { FOOD_JSON, TYPES_OF_FOOD, Capitalize, UndersoreString } =
         await import("./script.js");
 
+    if (!FOOD_JSON || FOOD_JSON.length === 0) {
+        console.error("❌ No food data available");
+        return;
+    }
+
     const MAIN_ELEMENT = document.querySelector("main");
     const RESULTS_SECTION = document.querySelector("#results_grid");
+    
+    if (!MAIN_ELEMENT || !RESULTS_SECTION) {
+        console.error("❌ Required DOM elements not found");
+        return;
+    }
+
     TYPES_OF_FOOD.forEach((type_of_food) => {
         const SECTION = document.createElement("section");
         const UNDERSCORED_TITLE = UndersoreString(type_of_food);
@@ -35,6 +48,8 @@ export async function initializeDynamicContent() {
         SECTION_TITLE.textContent = Capitalize(type_of_food);
         const GRID = document.createElement("div");
         GRID.classList.add("grid", "grid_shop");
+        
+        let itemCount = 0;
         for (const CURRENT_FOOD of FOOD_JSON) {
             if (CURRENT_FOOD["type"] === type_of_food) {
                 const CARD_FOOD = create_card(
@@ -47,28 +62,34 @@ export async function initializeDynamicContent() {
                     const card_clone = CARD_FOOD.cloneNode(true);
                     parent_elem.insertAdjacentElement("beforeend", card_clone);
                 });
+                itemCount++;
             }
         }
+        
+        console.log(`✅ Added ${itemCount} items for ${type_of_food}`);
+        
         [SECTION_TITLE, GRID].forEach((elem) =>
             SECTION.insertAdjacentElement("beforeend", elem)
         );
         MAIN_ELEMENT.insertAdjacentElement("beforeend", SECTION);
     });
+    
+    console.log("✅ Dynamic content initialization complete");
 }
 
 function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
     const CARD_FOOD = document.createElement("div");
     let card_clone;
     if (motive === "section") {
+        CARD_FOOD.classList.add("cart_item", "card");
         if (type_of_food.includes(" ")) {
-            CARD_FOOD.classList.add(UNDERSCORED_TITLE, "cart_item", "card");
+            CARD_FOOD.classList.add(UNDERSCORED_TITLE);
         } else {
-            CARD_FOOD.classList.add(type_of_food, "cart_item", "card");
+            CARD_FOOD.classList.add(type_of_food);
         }
     } else {
-        CARD_FOOD.classList.add("cart_item");
+        CARD_FOOD.classList.add("cart_item", "card");
     }
-    CARD_FOOD.classList.add("cart_item", "card");
     const CARD_FOOD_DATA = document.createElement("div");
     CARD_FOOD_DATA.classList.add("cart_item_data", "flex", "j_sb");
     const CARD_FOOD_DATA_TEXT = document.createElement("div");
@@ -90,9 +111,11 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
     );
     const IMG = document.createElement("img");
     if (motive === "section") {
-        IMG.src = CURRENT_FOOD["image"];
+        IMG.src = CURRENT_FOOD["image"] || "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlbiBubyBkaXNwb25pYmxlPC90ZXh0Pjwvc3ZnPg==";
+        IMG.alt = CURRENT_FOOD["name"] || "Producto";
     } else {
-        IMG.src = motive["image"];
+        IMG.src = motive["image"] || "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlbiBubyBkaXNwb25pYmxlPC90ZXh0Pjwvc3ZnPg==";
+        IMG.alt = motive["name"] || "Producto";
     }
     [CARD_FOOD_DATA_TEXT, IMG].forEach((elem) =>
         CARD_FOOD_DATA.insertAdjacentElement("beforeend", elem)
@@ -102,9 +125,11 @@ function create_card(motive, type_of_food, UNDERSCORED_TITLE, CURRENT_FOOD) {
     const PRICE = document.createElement("span");
     PRICE.classList.add("item_price");
     if (motive === "section") {
-        PRICE.textContent = `$ ${CURRENT_FOOD["price"]} c/u`;
+        const price = CURRENT_FOOD["price"] || "0";
+        PRICE.textContent = `$ ${price} c/u`;
     } else {
-        PRICE.textContent = motive["price"];
+        const price = motive["price"] || "$ 0";
+        PRICE.textContent = price;
     }
     let button_or_input;
     if (motive === "section") {
@@ -168,12 +193,15 @@ export function Update_checkout() {
         let contador = 0;
         for (let i = 0; i < localStorage.length; i++) {
             const STORAGED_ITEM = JSON.parse(localStorage[localStorage.key(i)]);
-            contador +=
-                Number(
-                    STORAGED_ITEM["price"]
-                        .match(DETECT_NUMBERS_PATTERN)
-                        .join("")
-                ) * Number(STORAGED_ITEM["quantity"]);
+            
+            // Verificar que el precio existe y no es undefined
+            if (STORAGED_ITEM["price"] && typeof STORAGED_ITEM["price"] === "string") {
+                const priceMatch = STORAGED_ITEM["price"].match(DETECT_NUMBERS_PATTERN);
+                if (priceMatch) {
+                    contador +=
+                        Number(priceMatch.join("")) * Number(STORAGED_ITEM["quantity"] || 1);
+                }
+            }
         }
         SUBTOTAL.insertAdjacentText("beforeend", `$ ${contador}`);
         TOTAL.insertAdjacentText("beforeend", `$ ${contador + 6000}`);

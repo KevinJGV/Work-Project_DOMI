@@ -84,20 +84,27 @@ export async function set_filters_from_json() {
     );
 
     const FILTERS_BUTTONS = document.querySelectorAll(".filter");
+    
     let counter = 0;
     FILTERS_BUTTONS.forEach((button) => {
-        if (TYPES_OF_FOOD[counter].includes(" ")) {
-            (button.value = UndersoreString(TYPES_OF_FOOD[counter])), "shop";
-        } else {
-            (button.value = TYPES_OF_FOOD[counter]), "shop";
+        if (counter < TYPES_OF_FOOD.length) {
+            if (TYPES_OF_FOOD[counter].includes(" ")) {
+                button.value = UndersoreString(TYPES_OF_FOOD[counter]);
+            } else {
+                button.value = TYPES_OF_FOOD[counter];
+            }
+            button.nextElementSibling.textContent = Capitalize(
+                TYPES_OF_FOOD[counter]
+            );
+            counter++;
         }
-        button.nextElementSibling.textContent = Capitalize(
-            TYPES_OF_FOOD[counter]
-        );
-        counter++;
     });
+    
+    console.log(`✅ Set up ${counter} filter buttons`);
 }
 
 export async function initializeFilters() {
+    console.log("🔧 Starting initializeFilters");
     await set_filters_from_json();
+    console.log("✅ Filters initialization complete");
 }
